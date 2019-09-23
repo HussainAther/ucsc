@@ -70,4 +70,29 @@ statefreq = {}
 # Extract the number of states to use as the frequency.
 for state in statelist:
     statefreq[state] = len(df.loc[df["State"] == state])
-print(statefreq)	
+
+# Lambert Conformal map of lower 48 states.
+m = Basemap(llcrnrlon=-119, llcrnrlat=22, urcrnrlon=-64, urcrnrlat=49,
+        projection="lcc", lat_1=33, lat_2=45, lon_0=-95)
+# Draw state boundaries.
+shp_info = m.readshapefile("data/map/st99_d00", "states", drawbounds=True)
+
+# Choose a color for each state based on number of jobs.
+colors={}
+
+# Use hot colormap set.
+cmap = plt.cm.copper
+
+# Hawaii has 8 main islands but several tiny atolls that extend for many miles.
+# This is the area cutoff between the 8 main islands and the tiny atolls.
+ATOLL_CUTOFF = 0.005
+
+# Cycle through state names, color each one.
+ax = plt.gca()
+
+# List of statenames.
+statenames = []
+
+# Keep track of max and min.
+maxx = 0
+minn =0
