@@ -1,3 +1,6 @@
+# Import numpy for number manipulation
+import numpy as np
+
 # Import pandas for data manipulation
 import pandas as pd
 
@@ -15,7 +18,7 @@ with nickel and chromium mineralization.
 """
 
 # Read the .txt file as a pandas DataFrame df
-df = pd.read_csv("data/nicr/nicrpge.txt", sep="|")
+df = pd.read_csv("data/nicr/nicrpge.txt", sep="|", encoding = "ISO-8859-1")
 
 # List of states + Puerto Rico
 statelist = [ 
@@ -27,6 +30,7 @@ statelist = [
 "Colorado",
 "Connecticut",
 "Delaware",
+"District of Columbia",
 "Florida",
 "Georgia",
 "Hawaii",
@@ -73,11 +77,11 @@ statelist = [
 
 # Initialize empty dictionary to keep track of the 
 # frequencies for each state.
-statefreq = {}
+statedict = {}
 
 # Extract the number of states to use as the frequency.
 for state in statelist:
-    statefreq[state] = len(df.loc[df["State"] == state])
+    statedict[state] = len(df.loc[df["State"] == state])
 
 # Lambert Conformal map of lower 48 states.
 m = Basemap(llcrnrlon=-119, llcrnrlat=22, urcrnrlon=-64, urcrnrlat=49,
