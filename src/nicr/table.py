@@ -195,7 +195,7 @@ elementfreq = {
  "I": 0,
  "In": 0,
  "Ir": 0,
- "K",: 0,
+ "K": 0,
  "Kr": 0,
  "La": 0,
  "Li": 0,
@@ -286,26 +286,32 @@ cmap = plasma
 bokeh_palette = "Plasma256"
 
 # Define number of and groups.
-period_label = range(1, 8)
+period_label = ['1', '2', '3', '4', '5', '6', '7']
 group_range = [str(x) for x in range(1, 19)]
 
 # Define matplotlib and bokeh color map.
-if log_scale == 0:
 color_mapper = LinearColorMapper(palette = bokeh_palette, low=min(data), 
 		high=max(data))
 norm = Normalize(vmin = min(data), vmax = max(data))
 color_scale = ScalarMappable(norm=norm, cmap=cmap).to_rgba(data,alpha=None)
 
+# Color specs
 blank_color = "#c4c4c4"
 color_list = []
 for i in range(len(elements)):
     color_list.append(blank_color)
 
+# Other specs
+width = 1050
+alpha = 0.65
+cbar_standoff = 12
+cbar_fontsize = 12
+cbar_height = 1000
+
 # Compare elements in dataset with elements in periodic table.
 for i, data_element in enumerate(data_elements):
     element_entry = elements.symbol[elements.symbol.str.lower() == data_element.lower()]
-    element_index = element_entry.index[0]
-    color_list[element_index] = to_hex(color_scale[i])
+    color_list[i] = to_hex(color_scale[i])
 
 # Define figure properties for visualizing data.
 source = ColumnDataSource(
@@ -317,3 +323,37 @@ source = ColumnDataSource(
         type_color=color_list
     )
 )
+
+# Plot the periodic table.
+p = figure(x_range=group_range, y_range=list(reversed(period_label)), tools="save")
+p.plot_width = width
+p.outline_line_color = None
+p.toolbar_location = "above"
+p.rect("group", "period", 0.9, 0.9, source=source,
+       alpha=alpha, color="type_color")
+p.axis.visible = False
+text_props = {
+    "source": source,
+    "angle": 0,
+    "color": "black",
+    "text_align": "left",
+    "text_baseline": "middle"
+}
+x = dodge("group", -0.4, range=p.x_range)
+y = dodge("period", 0.3, range=p.y_range)
+p.text(x=x, y="period", text="sym",
+       text_font_style="bold", text_font_size="16pt", **text_props)
+p.text(x=x, y=y, text="atomic_number",
+       text_font_size="11pt", **text_props)
+
+color_bar = ColorBar(color_mapper=color_mapper,
+	ticker=BasicTicker(desired_num_ticks=10),border_line_color=None,
+	label_standoff=cbar_standoff,location=(0,0),orientation="vertical",
+    scale_alpha=alpha,major_label_text_font_size=str(cbar_fontsize)+"pt")
+
+if cbar_height is not None:
+	color_bar.height = cbar_height
+
+p.add_layout(color_bar,"right")
+p.grid.grid_line_color = None
+show(p)
