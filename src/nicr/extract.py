@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
 import pandas as pd
 
 """
@@ -5,8 +7,10 @@ Extract information and draw trends from platinum-group elements (PGE)
 with nickel and chromium mineralization.
 """
 
+# Read the .txt file as a pandas DataFrame df
 df = pd.read_csv("data/nicr/nicrpge.txt", sep="|")
 
+# List of states
 statelist = [ 
 "Alabama",
 "Alaska",
@@ -57,5 +61,13 @@ statelist = [
 "Washington",
 "West Virginia",
 "Wisconsin",
-"Wyoming",
-"*"]
+"Wyoming"]
+
+# Initialize empty dictionary to keep track of the 
+# frequencies for each state.
+statefreq = {}
+
+# Extract the number of states to use as the frequency.
+for state in statelist:
+    statefreq[state] = len(df.loc[df["State"] == state])
+print(statefreq)	
