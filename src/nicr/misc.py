@@ -16,4 +16,4 @@ with nickel and chromium mineralization.
 # Read the .txt file as a pandas DataFrame df
 df = pd.read_csv("data/nicr/nicrpge.txt", sep="|", encoding = "ISO-8859-1")
 
-
+print(df.head())
