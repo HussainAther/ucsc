@@ -111,3 +111,29 @@ for shapedict in m.states_info:
     # population), take sqrt root to spread out colors more.
     colors[statename] = cmap(freq)[:3]
     statenames.append(statename)
+
+# For each state, map and color it.
+for nshape, seg in enumerate(m.states):
+    # skip DC and Puerto Rico.
+    if statenames[nshape] != "Puerto Rico":
+    # Offset Alaska and Hawaii to the lower-left corner.
+        if statenames[nshape] == "Alaska":  # Scale Alaska appropriately.
+            segx = [i[0] for i in seg]
+            segy = [i[1] for i in seg]
+            lamx = lambda x: .35*float(x) + 1100000
+            lamy = lambda y: .35*float(y) - 1300000
+            lamxy = lambda x, y: lamx, lamy
+            segx = list(map(lamx, segx))
+            segy = list(map(lamy, segy))
+            seg = np.column_stack((segx, segy))
+        elif statenames[nshape] == "Hawaii": # Scale Hawaii appropriately.
+            segx = [i[0] for i in seg]
+            segy = [i[1] for i in seg]
+            lamx = lambda x: float(x) + 5200000
+            lamy = lambda y: float(y) - 1400000
+            segx = list(map(lamx, segx))
+            segy = list(map(lamy, segy))
+            seg = np.column_stack((segx, segy))
+        color = rgb2hex(colors[statenames[nshape]])
+        poly = Polygon(seg, facecolor=color, edgecolor=color)
+        ax.add_patch(poly)
