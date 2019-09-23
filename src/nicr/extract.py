@@ -10,7 +10,7 @@ with nickel and chromium mineralization.
 # Read the .txt file as a pandas DataFrame df
 df = pd.read_csv("data/nicr/nicrpge.txt", sep="|")
 
-# List of states
+# List of states + Puerto Rico
 statelist = [ 
 "Alabama",
 "Alaska",
@@ -50,6 +50,7 @@ statelist = [
 "Oklahoma",
 "Oregon",
 "Pennsylvania",
+"Puerto Rico",
 "Rhode Island",
 "South Carolina",
 "South Dakota",
@@ -95,4 +96,18 @@ statenames = []
 
 # Keep track of max and min.
 maxx = 0
-minn =0
+minn = 0
+
+# For each state, find a color for it.
+for shapedict in m.states_info:
+    statename = shapedict["NAME"]
+    freq = statedict[statename]
+    if freq > maxx:
+        maxx = freq
+    if freq < minn:
+        minn = freq
+    # Calling colormap with value between 0 and 1 returns
+    # rgba value.  Invert color range (hot colors are high
+    # population), take sqrt root to spread out colors more.
+    colors[statename] = cmap(freq)[:3]
+    statenames.append(statename)
