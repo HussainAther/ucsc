@@ -78,7 +78,7 @@ m = Basemap(llcrnrlon=-119, llcrnrlat=22, urcrnrlon=-64, urcrnrlat=49,
 # Draw state boundaries.
 shp_info = m.readshapefile("data/map/st99_d00", "states", drawbounds=True)
 
-# Choose a color for each state based on number of jobs.
+# Choose a color for each state based on number of deposits.
 colors={}
 
 # Use hot colormap set.
@@ -137,3 +137,11 @@ for nshape, seg in enumerate(m.states):
         color = rgb2hex(colors[statenames[nshape]])
         poly = Polygon(seg, facecolor=color, edgecolor=color)
         ax.add_patch(poly)
+
+print("Max frequency " + str(maxx))
+v = np.linspace(minn, maxx)
+plt.title("PGE-Ni-Cr Deposits by state")
+plt.contourf(colors.values(), 51, cmap="copper")
+plt.colorbar(ticks=v)
+plt.savefig("output/nicr/nicrmap.png")
+plt.close()
