@@ -307,3 +307,13 @@ for i, data_element in enumerate(data_elements):
     element_index = element_entry.index[0]
     color_list[element_index] = to_hex(color_scale[i])
 
+# Define figure properties for visualizing data.
+source = ColumnDataSource(
+    data=dict(
+        group=[str(x) for x in elements["group"]],
+        period=[str(y) for y in elements["period"]],
+        sym=elements["symbol"],
+        atomic_number=elements["atomic number"],
+        type_color=color_list
+    )
+)
