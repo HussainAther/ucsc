@@ -274,4 +274,8 @@ for index, row in df.iterrows():
         if elem in elements:
             elementfreq[elem] += 1
         elif elem == "PGE":
-            PGE += 1 
+            PGE += 1
+
+# Colormap settings
+cmap = plasma
+bokeh_palette = 'Plasma256' 
