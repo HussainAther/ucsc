@@ -25,7 +25,7 @@ with nickel and chromium mineralization.
 # Read the .txt file as a pandas DataFrame df
 df = pd.read_csv("data/nicr/nicrpge.txt", sep="|", encoding = "ISO-8859-1")
 
-elements = [
+elementlist = [
  "Ac",
  "Ag",
  "Al",
@@ -271,11 +271,25 @@ PGE = 0
 # Extract the number of elements to use as the frequency.
 for index, row in df.iterrows():
     for elem in row["Commod_gp"].replace(" ","").split(","):
-        if elem in elements:
+        if elem in elementfreq:
             elementfreq[elem] += 1
         elif elem == "PGE":
             PGE += 1
 
+data_elements = list(elementfreq) 
+data_elements.append("PGE")
+data = elementfreq.values()
+data.append(PGE)
+
 # Colormap settings
 cmap = plasma
-bokeh_palette = 'Plasma256' 
+bokeh_palette = "Plasma256"
+
+#Define number of and groups
+period_label = range(1, 8)
+group_range = [str(x) for x in range(1, 19)]
+
+blank_color = "#c4c4c4"
+color_list = []
+for i in range(len(elements)):
+    color_list.append(blank_color)
