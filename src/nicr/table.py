@@ -285,14 +285,9 @@ data.append(PGE)
 cmap = plasma
 bokeh_palette = "Plasma256"
 
-#Define number of and groups
+# Define number of and groups.
 period_label = range(1, 8)
 group_range = [str(x) for x in range(1, 19)]
-
-blank_color = "#c4c4c4"
-color_list = []
-for i in range(len(elements)):
-    color_list.append(blank_color)
 
 # Define matplotlib and bokeh color map.
 if log_scale == 0:
@@ -300,3 +295,15 @@ color_mapper = LinearColorMapper(palette = bokeh_palette, low=min(data),
 		high=max(data))
 norm = Normalize(vmin = min(data), vmax = max(data))
 color_scale = ScalarMappable(norm=norm, cmap=cmap).to_rgba(data,alpha=None)
+
+blank_color = "#c4c4c4"
+color_list = []
+for i in range(len(elements)):
+    color_list.append(blank_color)
+
+# Compare elements in dataset with elements in periodic table.
+for i, data_element in enumerate(data_elements):
+    element_entry = elements.symbol[elements.symbol.str.lower() == data_element.lower()]
+    element_index = element_entry.index[0]
+    color_list[element_index] = to_hex(color_scale[i])
+
