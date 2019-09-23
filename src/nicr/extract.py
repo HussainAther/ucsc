@@ -1,6 +1,13 @@
+# Import pandas for data manipulation
+import pandas as pd
+
+# Map plotting tools
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
-import pandas as pd
+
+from mpl_toolkits.basemap import Basemap 
+from matplotlib.colors import rgb2hex
+from matplotlib.patches import Polygon
 
 """
 Extract information and draw trends from platinum-group elements (PGE)
