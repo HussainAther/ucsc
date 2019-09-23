@@ -293,3 +293,18 @@ blank_color = "#c4c4c4"
 color_list = []
 for i in range(len(elements)):
     color_list.append(blank_color)
+
+# Define matplotlib and bokeh color map.
+if log_scale == 0:
+	color_mapper = LinearColorMapper(palette = bokeh_palette, low=min(data), 
+		high=max(data))
+	norm = Normalize(vmin = min(data), vmax = max(data))
+elif log_scale == 1:
+	for datum in data:
+		if datum < 0:
+			raise ValueError('Entry for element '+datum+' is negative but'
+			' log-scale is selected')
+	color_mapper = LogColorMapper(palette = bokeh_palette, low=min(data), 
+		high=max(data))
+	norm = LogNorm(vmin = min(data), vmax = max(data))
+color_scale = ScalarMappable(norm=norm, cmap=cmap).to_rgba(data,alpha=None)
