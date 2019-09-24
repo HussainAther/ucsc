@@ -160,3 +160,57 @@ usminedproduction = usminedproduction.transpose()
 usminedproduction.columns = usminedproduction.iloc[0]
 usminedproduction = usminedproduction[1:]
 usminedproduction.iplot(kind="scatter", filename="U.S. Mined Production")
+
+commodity = [
+    "Antimony",
+    "Barite",
+    "Bauxite", 
+    "Beryllium",
+    "Bismuth",
+    "Boron",
+    "Chromium",
+    "Cobalt",
+    "CopperW/OU.S.Prod",
+    "CopperW/U.S.Prod",
+    "Feldspar",
+    "Fluorspar",
+    "Gold",
+    "Graphite",
+    "Indium",
+    "Iodine",
+    "Ironore",
+    "Lead",
+    "Lithium",
+    "Manganese",
+    "Mercury",
+    "Mgcompounds",
+    "Mica",
+    "MolybdenumW/OU.S.Prod",
+    "MolybdenumW/U.S.Prod",
+    "Nickel",
+    "Niobium",
+    "Platinum",
+    "Palladium",
+    "OtherPGMs",
+    "PhosphateW/OU.S.Prod",
+    "PhosphateW/U.S.Prod",
+    "Potash",
+    "Rareearths",
+    "Monazite",
+    "RheniumW/OU.S.Prod
+    "RheniumW/U.S.Prod
+    "Selenium
+    "Silicon
+    "Silver
+    "Strontium
+    "SulfurW/OU.S.Prod
+    "SulfurW/U.S.Prod
+    "Tantalum
+    "Tellurium
+    "Tin
+    "Tungsten
+    "Vanadium
+    "Yttrium
+    "Zinc
+    "Zirconium
+]
