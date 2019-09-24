@@ -1,7 +1,13 @@
-import glob
+import cufflinks as cf
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import plotly
+import plotly.plotly as py
+
+from IPython.display import IFrame    
+
+plotly.tools.set_credentials_file(username='SHussainAther', api_key='NIq3xfEuGHKtywGFRr0c')
 
 """
 It's like Minecraft except not.
@@ -110,3 +116,31 @@ for df in alldf:
     outhtml.write(pd.DataFrame.to_html(df, index=False))
     outhtml.write("\n")
 
+usminedconsumption = pd.concat([usmined.loc[usmined.Value == "AluminaConsumption"],
+                           usmined.loc[usmined.Value == "AntimonyConsumption"],
+                           usmined.loc[usmined.Value == "BariteConsumption"],
+                           usmined.loc[usmined.Value == "BauxiteConsumption"],
+                           usmined.loc[usmined.Value == "BerylliumConsumption"],
+                           usmined.loc[usmined.Value == "CopperConsumption"],
+                           usmined.loc[usmined.Value == "FeldsparConsumption"],
+                           usmined.loc[usmined.Value == "GoldConsumption"],
+                           usmined.loc[usmined.Value == "GraphiteConsumption"],
+                           usmined.loc[usmined.Value == "IodineConsumption"],
+                           usmined.loc[usmined.Value == "IronConsumption"],
+                           usmined.loc[usmined.Value == "LeadConsumption"],
+                           usmined.loc[usmined.Value == "LithiumConsumption"],
+                           usmined.loc[usmined.Value == "MagnesiumConsumption"],
+                           usmined.loc[usmined.Value == "ManganeseConsumption"],
+                           usmined.loc[usmined.Value == "MicaConsumption"],
+                           usmined.loc[usmined.Value == "MolybdenumConsumption"],
+                           usmined.loc[usmined.Value == "PerliteConsumption"],
+                           usmined.loc[usmined.Value == "PhosphaterockConsumption"],
+                           usmined.loc[usmined.Value == "PotashConsumption"],
+                           usmined.loc[usmined.Value == "TantalumConsumption"],
+                           usmined.loc[usmined.Value == "TitaniumConsumption"]])
+
+print(usminedconsumption.head())
+py.iplot([{
+    'y': usminedconsumption.Value,
+    'x': ["2005", "2006", "2007", "2008", "2009"],
+    'name': "Year"}])
