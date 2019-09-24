@@ -1,22 +1,22 @@
-"Table 78. Global production of smeltered zinc, three leading producing countries, and the concentration ratio of the top three producing countries (thousand metric tons).",,,,,,,,
-Year,World smelter production,Concentration ratio,1st Smelter production,1st Country,2nd Smelter production,2nd Country,3rd Smelter production,3rd Country
-1990," 	7,180.00 ", 	0.31 , 	890.00 ,USSR, 	732.00 ,Japan, 	592.00 ,Canada
-1991," 	7,310.00 ", 	0.31 , 	800.00 ,USSR, 	778.70 ,Japan, 	660.55 ,Canada
-1992," 	7,260.00 ", 	0.30 , 	780.60 ,Japan, 	719.00 ,China, 	671.70 ,Canada
-1993," 	7,360.00 ", 	0.31 , 	857.00 ,China, 	744.57 ,Japan, 	659.88 ,Canada
-1994," 	7,330.00 ", 	0.33 ," 	1,000.00 ",China, 	713.03 ,Japan, 	690.97 ,Canada
-1995," 	7,370.00 ", 	0.34 ," 	1,080.00 ",China, 	720.35 ,Canada, 	711.05 ,Japan
-1996," 	7,610.00 ", 	0.33 ," 	1,180.00 ",China, 	715.55 ,Canada, 	642.27 ,Japan
-1997," 	7,920.00 ", 	0.35 ," 	1,430.00 ",China, 	703.80 ,Canada, 	650.21 ,Japan
-1998," 	8,120.00 ", 	0.36 ," 	1,490.00 ",China, 	745.13 ,Canada, 	652.29 ,Japan
-1999," 	8,550.00 ", 	0.37 ," 	1,700.00 ",China, 	776.93 ,Canada, 	683.62 ,Japan
-2000," 	9,020.00 ", 	0.38 ," 	1,980.00 ",China, 	779.89 ,Canada, 	698.75 ,Japan
-2001," 	9,320.00 ", 	0.36 ," 	2,040.00 ",China, 	648.05 ,Japan, 	661.17 ,Canada
-2002," 	9,480.00 ", 	0.38 ," 	2,100.00 ",China, 	793.41 ,Canada, 	673.91 ,Japan
-2003," 	10,100.00 ", 	0.37 ," 	2,320.00 ",China, 	761.20 ,Canada, 	686.12 ,Japan
-2004," 	10,600.00 ", 	0.40 ," 	2,720.00 ",China, 	805.44 ,Canada, 	668.67 ,S. Korea
-2005," 	10,300.00 ", 	0.41 ," 	2,780.00 ",China, 	724.04 ,Canada, 	675.22 ,Japan
-2006," 	10,800.00 ", 	0.43 ," 	3,170.00 ",China, 	824.46 ,Canada, 	662.52 ,S. Korea
-2007," 	11,400.00 ", 	0.46 ," 	3,740.00 ",China, 	802.10 ,Canada, 	690.00 ,S. Korea
-2008," 	11,700.00 ", 	0.47 ," 	4,000.00 ",China, 	764.32 ,Canada, 	738.00 ,S. Korea
-2009," 	11,400.00 ", 	0.50 ," 	4,360.00 ",China, 	685.50 ,Canada, 	643.00 ,Japan
+"Table78.Globalproductionofsmelteredzinc,threeleadingproducingcountries,andtheconcentrationratioofthetopthreeproducingcountries(thousandmetrictons).",,,,,,,,
+Year,Worldsmelterproduction,Concentrationratio,1stSmelterproduction,1stCountry,2ndSmelterproduction,2ndCountry,3rdSmelterproduction,3rdCountry
+1990,"7,180.00",0.31,890.00,USSR,732.00,Japan,592.00,Canada
+1991,"7,310.00",0.31,800.00,USSR,778.70,Japan,660.55,Canada
+1992,"7,260.00",0.30,780.60,Japan,719.00,China,671.70,Canada
+1993,"7,360.00",0.31,857.00,China,744.57,Japan,659.88,Canada
+1994,"7,330.00",0.33,"1,000.00",China,713.03,Japan,690.97,Canada
+1995,"7,370.00",0.34,"1,080.00",China,720.35,Canada,711.05,Japan
+1996,"7,610.00",0.33,"1,180.00",China,715.55,Canada,642.27,Japan
+1997,"7,920.00",0.35,"1,430.00",China,703.80,Canada,650.21,Japan
+1998,"8,120.00",0.36,"1,490.00",China,745.13,Canada,652.29,Japan
+1999,"8,550.00",0.37,"1,700.00",China,776.93,Canada,683.62,Japan
+2000,"9,020.00",0.38,"1,980.00",China,779.89,Canada,698.75,Japan
+2001,"9,320.00",0.36,"2,040.00",China,648.05,Japan,661.17,Canada
+2002,"9,480.00",0.38,"2,100.00",China,793.41,Canada,673.91,Japan
+2003,"10,100.00",0.37,"2,320.00",China,761.20,Canada,686.12,Japan
+2004,"10,600.00",0.40,"2,720.00",China,805.44,Canada,668.67,S.Korea
+2005,"10,300.00",0.41,"2,780.00",China,724.04,Canada,675.22,Japan
+2006,"10,800.00",0.43,"3,170.00",China,824.46,Canada,662.52,S.Korea
+2007,"11,400.00",0.46,"3,740.00",China,802.10,Canada,690.00,S.Korea
+2008,"11,700.00",0.47,"4,000.00",China,764.32,Canada,738.00,S.Korea
+2009,"11,400.00",0.50,"4,360.00",China,685.50,Canada,643.00,Japan

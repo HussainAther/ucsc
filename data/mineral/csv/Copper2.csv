@@ -1,23 +1,23 @@
-"Table 19. Global production of refined primary copper, the three leading producing countries, and the concentration ratio of the top three producing countries (thousand metric tons).",,,,,,,,,
-Year,World refined production,U.S. refined production,Concentration ratio,1st Refined production,1st Country,2nd Refined production,2nd Country,3rd Refined production,3rd Country
-1990," 	8,587.40 "," 	1,180.00 ", 	0.43 ," 	1,350.00 ",USSR," 	1,190.00 ",Chile," 	1,180.00 ",Japan
-1991," 	8,471.50 "," 	1,140.00 ", 	0.43 ," 	1,250.00 ",USSR," 	1,230.00 ",Chile," 	1,140.00 ",Japan
-1992," 	8,796.40 "," 	1,210.00 ", 	0.31 ," 	1,242.00 ",Chile, 	967.70 ,Japan, 	525.00 ,Russia
-1993," 	8,992.07 "," 	1,300.00 ", 	0.32 ," 	1,268.00 ",Chile," 	1,099.00 ",Japan, 	522.00 ,Russia
-1994," 	8,682.40 "," 	1,350.00 ", 	0.30 ," 	1,076.40 ",Chile," 	1,026.00 ",Japan, 	502.20 ,Canada
-1995," 	8,874.39 "," 	1,390.00 ", 	0.32 ," 	1,119.00 ",Chile," 	1,081.00 ",Japan, 	612.00 ,China
-1996," 	10,700.00 "," 	1,430.00 ", 	0.28 ," 	1,140.50 ",Japan," 	1,112.50 ",Chile, 	692.00 ,China
-1997," 	11,400.00 "," 	1,480.00 ", 	0.28 ," 	1,235.60 ",Chile," 	1,157.30 ",Japan, 	801.00 ,China
-1998," 	12,150.00 "," 	1,530.00 ", 	0.27 ," 	1,226.90 ",Chile," 	1,149.27 ",Japan, 	870.00 ,China
-1999," 	12,710.00 "," 	1,300.00 ", 	0.26 ," 	1,304.30 ",Chile," 	1,215.25 ",Japan, 	836.00 ,China
-2000," 	12,930.00 "," 	1,030.00 ", 	0.28 ," 	1,295.70 ",Chile," 	1,292.35 ",Japan," 	1,023.80 ",China
-2001," 	13,900.00 "," 	1,000.00 ", 	0.28 ," 	1,344.00 ",Chile," 	1,287.17 ",Japan," 	1,218.00 ",China
-2002," 	11,200.00 ", 	841.00 , 	0.34 ," 	1,300.00 ",China," 	1,248.10 ",Chile," 	1,211.11 ",Japan
-2003," 	10,800.00 ", 	662.00 , 	0.36 ," 	1,430.00 ",China," 	1,251.73 ",Japan," 	1,248.80 ",Chile
-2004," 	11,100.00 ", 	671.00 , 	0.36 ," 	1,590.00 ",China," 	1,200.40 ",Chile," 	1,188.49 ",Japan
-2005," 	11,800.00 ", 	654.00 , 	0.37 ," 	1,865.00 ",China," 	1,239.40 ",Chile," 	1,239.40 ",Japan
-2006," 	11,900.00 ", 	675.00 , 	0.38 ," 	2,000.00 ",China," 	1,409.09 ",Japan," 	1,119.50 ",Chile
-2007," 	12,200.00 ", 	764.00 , 	0.40 ," 	2,400.00 ",China," 	1,367.31 ",Japan," 	1,105.00 ",Chile
-2008," 	12,400.00 ", 	713.00 , 	0.42 ," 	2,700.00 ",China," 	1,366.31 ",Japan," 	1,087.00 ",Chile
-2009," 	12,300.00 ", 	636.00 , 	0.42 ," 	2,750.00 ",China," 	1,297.94 ",Japan," 	1,159.00 ",Chile
-2010," 	12,300.00 ",--, 	0.45 ," 	2,950.00 ",China," 	1,382.66 ",Japan," 	1,155.00 ",Chile
+"Table19.Globalproductionofrefinedprimarycopper,thethreeleadingproducingcountries,andtheconcentrationratioofthetopthreeproducingcountries(thousandmetrictons).",,,,,,,,,
+Year,Worldrefinedproduction,U.S.refinedproduction,Concentrationratio,1stRefinedproduction,1stCountry,2ndRefinedproduction,2ndCountry,3rdRefinedproduction,3rdCountry
+1990,"8,587.40","1,180.00",0.43,"1,350.00",USSR,"1,190.00",Chile,"1,180.00",Japan
+1991,"8,471.50","1,140.00",0.43,"1,250.00",USSR,"1,230.00",Chile,"1,140.00",Japan
+1992,"8,796.40","1,210.00",0.31,"1,242.00",Chile,967.70,Japan,525.00,Russia
+1993,"8,992.07","1,300.00",0.32,"1,268.00",Chile,"1,099.00",Japan,522.00,Russia
+1994,"8,682.40","1,350.00",0.30,"1,076.40",Chile,"1,026.00",Japan,502.20,Canada
+1995,"8,874.39","1,390.00",0.32,"1,119.00",Chile,"1,081.00",Japan,612.00,China
+1996,"10,700.00","1,430.00",0.28,"1,140.50",Japan,"1,112.50",Chile,692.00,China
+1997,"11,400.00","1,480.00",0.28,"1,235.60",Chile,"1,157.30",Japan,801.00,China
+1998,"12,150.00","1,530.00",0.27,"1,226.90",Chile,"1,149.27",Japan,870.00,China
+1999,"12,710.00","1,300.00",0.26,"1,304.30",Chile,"1,215.25",Japan,836.00,China
+2000,"12,930.00","1,030.00",0.28,"1,295.70",Chile,"1,292.35",Japan,"1,023.80",China
+2001,"13,900.00","1,000.00",0.28,"1,344.00",Chile,"1,287.17",Japan,"1,218.00",China
+2002,"11,200.00",841.00,0.34,"1,300.00",China,"1,248.10",Chile,"1,211.11",Japan
+2003,"10,800.00",662.00,0.36,"1,430.00",China,"1,251.73",Japan,"1,248.80",Chile
+2004,"11,100.00",671.00,0.36,"1,590.00",China,"1,200.40",Chile,"1,188.49",Japan
+2005,"11,800.00",654.00,0.37,"1,865.00",China,"1,239.40",Chile,"1,239.40",Japan
+2006,"11,900.00",675.00,0.38,"2,000.00",China,"1,409.09",Japan,"1,119.50",Chile
+2007,"12,200.00",764.00,0.40,"2,400.00",China,"1,367.31",Japan,"1,105.00",Chile
+2008,"12,400.00",713.00,0.42,"2,700.00",China,"1,366.31",Japan,"1,087.00",Chile
+2009,"12,300.00",636.00,0.42,"2,750.00",China,"1,297.94",Japan,"1,159.00",Chile
+2010,"12,300.00",--,0.45,"2,950.00",China,"1,382.66",Japan,"1,155.00",Chile
