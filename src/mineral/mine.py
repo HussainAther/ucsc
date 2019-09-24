@@ -161,7 +161,7 @@ usminedproduction.columns = usminedproduction.iloc[0]
 usminedproduction = usminedproduction[1:]
 usminedproduction.iplot(kind="scatter", filename="U.S. Mined Production")
 
-commodity = [
+minecom = [ # Mined commodities
     "Antimony",
     "Barite",
     "Bauxite", 
@@ -197,20 +197,20 @@ commodity = [
     "Potash",
     "Rareearths",
     "Monazite",
-    "RheniumW/OU.S.Prod
-    "RheniumW/U.S.Prod
-    "Selenium
-    "Silicon
-    "Silver
-    "Strontium
-    "SulfurW/OU.S.Prod
-    "SulfurW/U.S.Prod
-    "Tantalum
-    "Tellurium
-    "Tin
-    "Tungsten
-    "Vanadium
-    "Yttrium
-    "Zinc
-    "Zirconium
+    "RheniumW/OU.S.Prod",
+    "RheniumW/U.S.Prod",
+    "Selenium",
+    "Silicon",
+    "Silver",
+    "Strontium",
+    "SulfurW/OU.S.Prod",
+    "SulfurW/U.S.Prod",
+    "Tantalum",
+    "Tellurium",
+    "Tin",
+    "Tungsten",
+    "Vanadium",
+    "Yttrium",
+    "Zinc",
+    "Zirconium"
 ]
