@@ -101,8 +101,8 @@ alldf = [al, al2, sb, sb2, bar, bau, be, bi, b, br, cd, cr,
            po, pl, pot, prodmined, prodproc, ree, rem, se, si, ag, smeltsn, 
            smeltzn, steel, sr, s, ta, te, sn, ti, w, usmined, usproc, v, y, zn, zr]
 
-outjson = open("data/mineral/all.json", "w")
-outhtml = open("data/mineral/all.html", "w")
+outjson = open("output/mineral/all.json", "w")
+outhtml = open("output/mineral/all.html", "w")
 
 for df in alldf:
     outjson.write(pd.DataFrame.to_json(df, orient="table", index=False))
