@@ -143,3 +143,20 @@ usminedconsumption.columns = usminedconsumption.iloc[0]
 usminedconsumption = usminedconsumption[1:]
 usminedconsumption.iplot(kind="scatter", filename="U.S. Mined Consumption")
 
+usminedproduction = pd.concat([usmined.loc[usmined.Value == "AluminaProduction"],
+                           usmined.loc[usmined.Value == "BariteProduction"],
+                           usmined.loc[usmined.Value == "BerylliumProduction"],
+                           usmined.loc[usmined.Value == "FeldsparProduction"],
+                           usmined.loc[usmined.Value == "GoldProduction"],
+                           usmined.loc[usmined.Value == "IronProduction"],
+                           usmined.loc[usmined.Value == "MicaProduction"],
+                           usmined.loc[usmined.Value == "MolybdenumProduction"],
+                           usmined.loc[usmined.Value == "PerliteProduction"],
+                           usmined.loc[usmined.Value == "PhosphaterockProduction"],
+                           usmined.loc[usmined.Value == "PotashProduction"],
+                           usmined.loc[usmined.Value == "TitaniumProduction"],
+                           usmined.loc[usmined.Value == "ZincProduction"]])
+usminedproduction = usminedproduction.transpose()
+usminedproduction.columns = usminedproduction.iloc[0]
+usminedproduction = usminedproduction[1:]
+usminedproduction.iplot(kind="scatter", filename="U.S. Mined Production")
