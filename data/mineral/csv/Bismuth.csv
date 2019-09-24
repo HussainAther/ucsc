@@ -1,21 +1,23 @@
-1990, 	3.44 , 	1.06 ,China, 	0.73 ,Mexico, 	0.56 ,Peru, 	0.68 
-1991, 	3.23 , 	1.04 ,China, 	0.65 ,Mexico, 	0.61 ,Peru, 	0.71 
-1992, 	2.87 , 	0.82 ,China, 	0.81 ,Mexico, 	0.55 ,Peru, 	0.76 
-1993, 	3.55 , 	1.30 ,Peru, 	0.91 ,Mexico, 	0.74 ,China, 	0.83 
-1994, 	3.41 , 	1.21 ,Peru, 	1.05 ,Mexico, 	0.61 ,China, 	0.84 
-1995, 	3.43 , 	1.00 ,Mexico, 	0.90 ,Peru, 	0.74 ,China, 	0.77 
-1996, 	3.60 , 	1.07 ,Mexico, 	1.00 ,Peru, 	0.61 ,China, 	0.74 
-1997, 	4.36 , 	1.64 ,Mexico, 	1.00 ,Peru, 	0.68 ,Bolivia, 	0.76 
-1998, 	3.93 , 	1.20 ,Mexico, 	1.03 ,Bolivia, 	1.00 ,Peru, 	0.82 
-1999, 	4.86 , 	2.68 ,China, 	1.00 ,Peru, 	0.55 ,Mexico, 	0.87 
-2000, 	3.80 , 	1.12 ,China, 	1.11 ,Mexico, 	1.00 ,Peru, 	0.85 
-2001, 	5.10 , 	2.00 ,China, 	1.39 ,Mexico, 	1.00 ,Peru, 	0.86 
-2002, 	4.60 , 	2.00 ,China, 	1.13 ,Mexico, 	1.00 ,Peru, 	0.90 
-2003, 	5.10 , 	2.50 ,China, 	1.00 ,Mexico, 	1.00 ,Peru, 	0.88 
-2004, 	5.60 , 	3.00 ,China, 	1.06 ,Mexico, 	1.00 ,Peru, 	0.90 
-2005, 	5.40 , 	3.00 ,China, 	0.97 ,Mexico, 	0.95 ,Peru, 	0.91 
-2006, 	5.80 , 	3.00 ,China, 	1.19 ,Mexico, 	0.95 ,Peru, 	0.89 
-2007, 	6.20 , 	3.50 ,China, 	1.20 ,Mexico, 	0.95 ,Peru, 	0.91 
-2008, 	7.60 , 	5.00 ,China, 	1.17 ,Mexico, 	0.96 ,Peru, 	0.94 
-2009, 	8.30 , 	6.00 ,China, 	1.00 ,Peru, 	0.85 ,Mexico, 	0.95 
-2010, 	8.90 , 	6.50 ,China, 	1.10 ,Peru, 	0.85 ,Mexico, 	0.95 
+"Table 10. Global production of mined bismuth, the three leading producing countries, and the concentration ratio of the top three producing countries (thousand metric tons).",,,,,,,,
+Year,World refined primary production,U.S. refined primary production,Concentration ratio,1st  Refined primary production,1st Country,2nd Refined primary production,2nd Country,3rd Refined primary production
+1990, 	4.19 , 	0.62 , 	1.06 ,China, 	1.00 ,Belgium, 	0.55 ,Peru
+1991, 	3.82 , 	0.67 , 	1.26 ,China, 	0.80 ,Belgium, 	0.50 ,Mexico
+1992, 	3.71 , 	0.65 , 	1.06 ,China, 	0.80 ,Belgium, 	0.55 ,Mexico
+1993, 	4.39 , 	0.67 , 	1.05 ,China, 	0.95 ,Belgium, 	0.94 ,Peru
+1994, 	4.18 , 	0.63 , 	0.90 ,Belgium, 	0.88 ,Peru, 	0.85 ,China
+1995, 	3.84 , 	0.66 , 	0.92 ,Mexico, 	0.80 ,China, 	0.80 ,Belgium
+1996, 	4.18 , 	0.64 , 	0.96 ,Mexico, 	0.94 ,Peru, 	0.80 ,Belgium
+1997, 	4.07 , 	0.63 , 	0.99 ,Mexico, 	0.80 ,Belgium, 	0.77 ,Peru
+1998, 	4.33 , 	0.62 , 	1.03 ,Mexico, 	0.83 ,Peru, 	0.82 ,China
+1999, 	3.57 , 	0.65 , 	0.86 ,China, 	0.75 ,Peru, 	0.70 ,Belgium
+2000, 	4.20 , 	0.61 , 	1.08 ,Mexico, 	0.77 ,China, 	0.70 ,Belgium
+2001, 	5.80 , 	0.71 , 	2.00 ,China, 	1.39 ,Mexico, 	0.70 ,Belgium
+2002, 	6.70 , 	0.77 , 	3.00 ,China, 	1.13 ,Mexico, 	1.00 ,Belgium
+2003, 	8.70 , 	0.81 , 	5.00 ,China, 	1.06 ,Mexico, 	1.00 ,Belgium
+2004, 	15.00 , 	0.90 , 	11.70 ,China, 	1.06 ,Mexico, 	0.80 ,Belgium
+2005, 	14.00 , 	0.88 , 	10.60 ,China, 	0.97 ,Mexico, 	0.80 ,Belgium
+2006, 	15.00 , 	0.92 , 	11.80 ,China, 	1.19 ,Mexico, 	0.80 ,Belgium
+2007, 	16.00 , 	0.88 , 	12.10 ,China, 	1.20 ,Mexico, 	0.80 ,Belgium
+2008, 	17.00 , 	0.89 , 	13.10 ,China, 	1.17 ,Mexico, 	0.80 ,Belgium
+2009, 	15.00 , 	0.93 , 	12.30 ,China, 	0.85 ,Mexico, 	0.80 ,Belgium
+2010, 	16.00 , 	0.92 , 	13.00 ,China, 	0.85 ,Mexico, 	0.80 ,Belgium
