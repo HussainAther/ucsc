@@ -109,3 +109,4 @@ for df in alldf:
     outjson.write("\n")
     outhtml.write(pd.DataFrame.to_html(df, index=False))
     outhtml.write("\n")
+
