@@ -138,9 +138,8 @@ usminedconsumption = pd.concat([usmined.loc[usmined.Value == "AluminaConsumption
                            usmined.loc[usmined.Value == "PotashConsumption"],
                            usmined.loc[usmined.Value == "TantalumConsumption"],
                            usmined.loc[usmined.Value == "TitaniumConsumption"]])
+usminedconsumption = usminedconsumption.transpose()
+usminedconsumption.columns = usminedconsumption.iloc[0]
+usminedconsumption = usminedconsumption[1:]
+usminedconsumption.iplot(kind="scatter", filename="U.S. Mined Consumption")
 
-print(usminedconsumption.head())
-py.iplot([{
-    'y': usminedconsumption.Value,
-    'x': ["2005", "2006", "2007", "2008", "2009"],
-    'name': "Year"}])
