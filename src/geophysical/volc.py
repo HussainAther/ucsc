@@ -1,4 +1,7 @@
 import pandas as pd
+import json
+import os
 
-df = pd.read_json("data/volc/tertvolc.json")
-
+# Reading the json as a dict
+with open("data/volc/tertvolc.json") as json_data:
+    data = json.load(json_data, encoding="utf-8")
