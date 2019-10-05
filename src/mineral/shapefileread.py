@@ -3,13 +3,9 @@ import numpy as np
 
 import matplotlib
 import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-
-from matplotlib.patches import Polygon
-from matplotlib.collections import PatchCollection
-from matplotlib.cm import *
-from IPython.display import Image as ImageShow
 
 sf = shapefile.Reader("data/mineral/mineplant-fUS/mineplant-fUS.shp")
 shapes  = sf.shapes()
-
+feature = sf.shapeRecords()[0]
+first = feature.shape.__geo_interface__ 
+print(first) 
