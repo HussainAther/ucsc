@@ -1,4 +1,4 @@
-import arc
+import arcpy
 import os
 
 mxd = file("data/offshoremonterey/OffshoreMontereyGIS.mxd", "a")  
