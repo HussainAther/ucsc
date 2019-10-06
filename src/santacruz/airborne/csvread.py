@@ -21,9 +21,9 @@ def valpoint(p):
     assert -90 <= lat <= 90, "bad latitude"
     assert -180 <= lon <= 180, "bad longitude"
 
-def distance_haversine(p1, p2):
+def distance_haversine(a, b):
     """
-    Calculate the great circle distance between two points 
+    Calculate the great circle distance between two lists of points 
     on the earth (specified in decimal degrees)
     Haversine
     formula: 
@@ -33,17 +33,22 @@ def distance_haversine(p1, p2):
     where   φ is latitude, λ is longitude, R is earth’s radius (mean radius = 6,371km);
             note that angles need to be in radians to pass to trig functions!
     """
-    lat1, lon1 = p1
-    lat2, lon2 = p2
-    for p in [p1, p2]:
-        validate_point(p)
-    R = 6371 # km - earths's radius
-    # convert decimal degrees to radians 
-    lat1, lon1, lat2, lon2 = map(radians, [lat1, lon1, lat2, lon2])
-    # haversine formula 
-    dlon = lon2 - lon1
-    dlat = lat2 - lat1
-    a = np.sin(dlat/2)**2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon/2)**2
-    c = 2 * np.asin(np.sqrt(a)) # 2 * np.atan2(np.sqrt(a), np.sqrt(1-a))
-    d = R * c
-    return d
+    result = []
+    for i in range(len(a)):
+        lat1, lon1 = a[i]
+        lat2, lon2 = b[i]
+        for p in [a[i], b[i]]:
+            validate_point(p)
+        R = 6371 # km - earths's radius
+        # convert decimal degrees to radians 
+        lat1, lon1, lat2, lon2 = map(radians, [lat1, lon1, lat2, lon2])
+        # haversine formula 
+        dlon = lon2 - lon1
+        dlat = lat2 - lat1
+        a = np.sin(dlat/2)**2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon/2)**2
+        c = 2 * np.asin(np.sqrt(a)) # 2 * np.atan2(np.sqrt(a), np.sqrt(1-a))
+        d = R * c
+        result.append(d)
+    return result
+
+distances = distance_haversine(magdf["latitude"], magdf["longitude"])
