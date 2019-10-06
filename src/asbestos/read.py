@@ -22,7 +22,7 @@ gdf = gpd.GeoDataFrame(df, crs=crs, geometry=geom)
 gdf.to_file(driver="ESRI Shapefile", filename="output/asbestos/data")
 
 # Restrict to America.
-country = gpd.read_file("data/asbestos/gz_2010_us_040_00_5m.json")
+country = gpd.read_file("data/gz_2010_us_040_00_5m.json")
 country = country[country["NAME"].isin(["Alaska","Hawaii"]) == False]
 
 # Plot.
