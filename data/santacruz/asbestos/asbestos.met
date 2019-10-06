@@ -1,0 +1,615 @@
+Metadata:
+  Identification_Information:
+    Citation:
+      Citation_Information:
+        Originator: Van Gosen, Bradley S.
+        Title: Asbestos mines, prospects, and occurrences in the US
+        Publication_Date: 2011
+        Series_Information:
+          Series_Name: Open-File Report
+        Publication_Information:
+          Publication_Place: Reston, Virginia
+          Publisher: U.S. Geological Survey
+        Online_Linkage: http://mrdata.usgs.gov/asbestos/
+    Description:
+      Abstract: Location and mineralogical characteristics of former mines, prospects, and occurrences of asbestos in the continental US.  No asbestos producing mines are currently active.  Data here are drawn from several previously published reports.
+      Purpose:
+        Provide general characteristics of historical mines and other
+        occurrences to support regional mineral resource assessment and
+        analysis of potential environmental effects.
+    Time_Period_of_Content:
+      Time_Period_Information:
+        Single_Date/Time:
+          Calendar_Date: 20010901
+      Currentness_Reference:
+        Completion of web interfaces providing these data to the public;
+        data come from previously published reports
+    Status:
+      Progress: Complete
+      Maintenance_and_Update_Frequency: As needed
+    Spatial_Domain:
+      Bounding_Coordinates:
+        West_Bounding_Coordinate: -123.7124
+        East_Bounding_Coordinate: -67.996
+        North_Bounding_Coordinate: 48.989
+        South_Bounding_Coordinate: 30.4779
+    Access_Constraints: none
+    Use_Constraints: none
+    Keywords:
+      Theme:
+        Theme_Keyword_Thesaurus: ISO 19115 Topic Category
+        Theme_Keyword: geoscientificInformation
+      Theme:
+        Theme_Keyword_Thesaurus: Alexandria Digital Library Feature Type Thesaurus
+        Theme_Keyword: mine sites
+        Theme_Keyword: mineral deposit areas
+      Theme:
+        Theme_Keyword_Thesaurus: General glossary for mineral resources spatial data
+        Theme_Keyword: comma-delimited text
+        Theme_Keyword: DBF
+        Theme_Keyword: HTML table
+        Theme_Keyword: KML
+        Theme_Keyword: shapefile
+        Theme_Keyword: tab-delimited text
+      Theme:
+        Theme_Keyword_Thesaurus: Lithologic classification of geologic map units
+        Theme_Keyword: Serpentinite
+      Theme:
+        Theme_Keyword_Thesaurus: Mineral Resources Data System commodity types
+        Theme_Keyword: Asbestos
+      Theme:
+        Theme_Keyword_Thesaurus: USGS Thesaurus
+        Theme_Keyword: economic geology
+        Theme_Keyword: geospatial datasets
+        Theme_Keyword: metamorphic rocks
+        Theme_Keyword: nonmetallic mineral resources
+      Place:
+        Place_Keyword_Thesaurus: Common geographic areas thesaurus
+        Place_Keyword: fUS01 = Alabama
+        Place_Keyword: fUS04 = Arizona
+        Place_Keyword: fUS05 = Arkansas
+        Place_Keyword: fUS06 = California
+        Place_Keyword: fUS08 = Colorado
+        Place_Keyword: fUS09 = Connecticut
+        Place_Keyword: fUS10 = Delaware
+        Place_Keyword: fUS12 = Florida
+        Place_Keyword: fUS13 = Georgia
+        Place_Keyword: fUS16 = Idaho
+        Place_Keyword: fUS17 = Illinois
+        Place_Keyword: fUS18 = Indiana
+        Place_Keyword: fUS19 = Iowa
+        Place_Keyword: fUS20 = Kansas
+        Place_Keyword: fUS21 = Kentucky
+        Place_Keyword: fUS22 = Louisiana
+        Place_Keyword: fUS23 = Maine
+        Place_Keyword: fUS24 = Maryland
+        Place_Keyword: fUS25 = Massachusetts
+        Place_Keyword: fUS26 = Michigan
+        Place_Keyword: fUS27 = Minnesota
+        Place_Keyword: fUS28 = Mississippi
+        Place_Keyword: fUS29 = Missouri
+        Place_Keyword: fUS30 = Montana
+        Place_Keyword: fUS31 = Nebraska
+        Place_Keyword: fUS32 = Nevada
+        Place_Keyword: fUS33 = New Hampshire
+        Place_Keyword: fUS34 = New Jersey
+        Place_Keyword: fUS35 = New Mexico
+        Place_Keyword: fUS36 = New York
+        Place_Keyword: fUS37 = North Carolina
+        Place_Keyword: fUS38 = North Dakota
+        Place_Keyword: fUS39 = Ohio
+        Place_Keyword: fUS40 = Oklahoma
+        Place_Keyword: fUS41 = Oregon
+        Place_Keyword: fUS42 = Pennsylvania
+        Place_Keyword: fUS44 = Rhode Island
+        Place_Keyword: fUS45 = South Carolina
+        Place_Keyword: fUS46 = South Dakota
+        Place_Keyword: fUS47 = Tennessee
+        Place_Keyword: fUS48 = Texas
+        Place_Keyword: fUS49 = Utah
+        Place_Keyword: fUS50 = Vermont
+        Place_Keyword: fUS51 = Virginia
+        Place_Keyword: fUS53 = Washington
+        Place_Keyword: fUS54 = West Virginia
+        Place_Keyword: fUS55 = Wisconsin
+        Place_Keyword: fUS56 = Wyoming
+    Point_of_Contact:
+      Contact_Information:
+        Contact_Person_Primary:
+          Contact_Person: Peter N Schweitzer
+          Contact_Organization: USGS ER GD
+        Contact_Position: Geologist
+        Contact_Address:
+          Address_Type: mailing address
+          Address: 12201 Sunrise Valley Drive
+          City: Reston
+          State_or_Province: VA
+          Postal_Code: 20192-0002
+          Country: USA
+        Contact_Voice_Telephone: 703-648-6533
+        Contact_Facsimile_Telephone: 703-648-6252
+        Contact_Electronic_Mail_Address: pschweitzer@usgs.gov
+    Browse_Graphic:
+      Browse_Graphic_File_Name: http://mrdata.usgs.gov/asbestos/asbestos-us-large.png
+      Browse_Graphic_File_Description: Distribution of asbestos locations in the continental US., (384 x 256 pixels)
+      Browse_Graphic_File_Type: PNG
+  Data_Quality_Information:
+    Lineage:
+      Source_Information:
+        Source_Citation:
+          Citation_Information:
+            Originator: Van Gosen, Bradley S.
+            Publication_Date: 2005
+            Title:
+              Reported historic asbestos mines, historic asbestos prospects, and
+              natural asbestos occurrences in the eastern United States
+            Series_Information:
+              Series_Name: Open-File Report
+              Issue_Identification: 2005-1189
+            Publication_Information:
+              Publisher: U.S. Geological Survey
+            Online_Linkage: http://pubs.usgs.gov/of/2005/1189/
+        Source_Citation_Abbreviation: ofr20051189
+        Source_Contribution: Asbestos and fibrous amphibole occurrences in the eastern US
+      Source_Information:
+        Source_Citation:
+          Citation_Information:
+            Originator: Van Gosen, Bradley S.
+            Publication_Date: 2006
+            Title:
+              Reported historic asbestos prospects and natural asbestos occurrences in
+              the central United States
+            Series_Information:
+              Series_Name: Open-File Report
+              Issue_Identification: 2006-1211
+            Publication_Information:
+              Publisher: U.S. Geological Survey
+            Online_Linkage: http://pubs.usgs.gov/of/2006/1211/
+        Source_Citation_Abbreviation: ofr20061211
+        Source_Contribution: Asbestos and fibrous amphibole occurrences in the central states of the US
+      Source_Information:
+        Source_Citation:
+          Citation_Information:
+            Originator: Van Gosen, Bradley S.
+            Publication_Date: 2007
+            Title:
+              Reported Historic Asbestos Mines, Historic Asbestos Prospects, and
+              Natural Asbestos Occurrences in the Rocky Mountain States of the United
+              States (Colorado, Idaho, Montana, New Mexico, and Wyoming)
+            Series_Information:
+              Series_Name: Open-File Report
+              Issue_Identification: 2007-1182
+            Publication_Information:
+              Publisher: U.S. Geological Survey
+            Online_Linkage: http://pubs.usgs.gov/of/2007/1182/
+        Source_Citation_Abbreviation: ofr20071182
+        Source_Contribution: Asbestos and fibrous amphibole occurrences in Colorado, Idaho, Montana, New Mexico, and Wyoming
+      Source_Information:
+        Source_Citation:
+          Citation_Information:
+            Originator: Van Gosen, Bradley S.
+            Publication_Date: 2008
+            Title:
+              Reported Historic Asbestos Mines, Historic Asbestos Prospects, and
+              Natural Asbestos Occurrences in the Southwestern United States (Arizona,
+              Nevada, and Utah)
+            Series_Information:
+              Series_Name: Open-File Report
+              Issue_Identification: 2008-1095
+            Publication_Information:
+              Publisher: U.S. Geological Survey
+            Online_Linkage: http://pubs.usgs.gov/of/2008/1095/
+        Source_Contribution: Asbestos and fibrous amphibole occurrences in Arizona, Nevada, and Utah
+      Source_Information:
+        Source_Citation:
+          Citation_Information:
+            Originator: Van Gosen, Bradley S.
+            Publication_Date: 2010
+            Title:
+              Reported Historic Asbestos Mines, Historic Asbestos Prospects, and Other
+              Natural Occurrences of Asbestos in Oregon and Washington
+            Series_Information:
+              Series_Name: Open-File Report
+              Issue_Identification: 2010-1041
+            Publication_Information:
+              Publisher: U.S. Geological Survey
+            Online_Linkage: http://pubs.usgs.gov/of/2010/1041/
+        Source_Citation_Abbreviation: ofr20101041
+        Source_Contribution: Asbestos and fibrous amphibole occurrences in Oregon and Washington
+      Source_Information:
+        Source_Citation:
+          Citation_Information:
+            Originator: Van Gosen, Bradley S.
+            Originator: Clinkenbeard, John P.
+            Publication_Date: 2011
+            Title:
+              Reported historic asbestos mines, historic asbestos prospects, and other
+              natural occurrences of asbestos in California
+            Series_Information:
+              Series_Name: Open-File Report
+              Issue_Identification: 2011-1188
+            Publication_Information:
+              Publisher: U.S. Geological Survey
+            Online_Linkage: http://pubs.usgs.gov/of/2011/1188/
+        Source_Citation_Abbreviation: ofr20111188
+        Source_Contribution: Asbestos, fibrous amphiboles and talc deposits of Death Valley in California
+      Process_Step:
+        Process_Description:
+          Data were drawn from the previously published reports, combined,
+          references linked to the records, and the information stored in a
+          fully relational database with specialized web interfaces
+          providing access by maps, geographic and topical browse, web
+          services, and a variety of download options.
+        Process_Date: 20110901
+  Spatial_Data_Organization_Information:
+    Direct_Spatial_Reference_Method: Point
+    Point_and_Vector_Object_Information:
+      SDTS_Terms_Description:
+        SDTS_Point_and_Vector_Object_Type: Entity point
+        Point_and_Vector_Object_Count: 913
+  Spatial_Reference_Information:
+    Horizontal_Coordinate_System_Definition:
+      Geographic:
+        Geographic_Coordinate_Units: decimal degrees
+      Geodetic_Model:
+        Horizontal_Datum_Name: North American Datum of 1927
+        Ellipsoid_Name: Clarke 1866
+        Semi-major_Axis: 6378206.4
+        Denominator_of_Flattening_Ratio: 294.98
+  Entity_and_Attribute_Information:
+    Detailed_Description:
+      Entity_Type:
+        Entity_Type_Label: main
+        Entity_Type_Definition: General site characteristics
+      Attribute:
+        Attribute_Label: rec_id
+        Attribute_Definition:
+          Site number.
+
+          Record identifier for a site description, applies only within this
+          database.
+          Integer values.
+          Int of width 4.
+        Attribute_Domain_Values:
+          Range_Domain:
+            Range_Domain_Minimum: 1
+            Range_Domain_Maximum: 1109
+            Attribute_Measurement_Resolution: 1
+      Attribute:
+        Attribute_Label: state
+        Attribute_Definition:
+          State.
+
+          US state in which the site occurs.
+          Textual values of no more than 2 characters.
+      Attribute:
+        Attribute_Label: county
+        Attribute_Definition:
+          County.
+
+          County in which the site occurs.
+          Textual values of no more than 32 characters.
+      Attribute:
+        Attribute_Label: site_name
+        Attribute_Definition:
+          Historic site name as reported.
+
+          Name of the site or mine.
+          Textual values of no more than 128 characters.
+      Attribute:
+        Attribute_Label: devel
+        Attribute_Definition:
+          Development.
+
+          Extent of development, may also include feature type.
+          Textual values of no more than 48 characters.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: (no value)
+            Enumerated_Domain_Value_Definition:
+              Information not available for this record.
+              55 records have no value for devel.
+      Attribute:
+        Attribute_Label: latitude
+        Attribute_Definition:
+          Latitude.
+
+          Geographic latitude in decimal degrees, NAD27.
+          Real numbers stored in double precision.
+        Attribute_Domain_Values:
+          Range_Domain:
+            Range_Domain_Minimum: 30.4779
+            Range_Domain_Maximum: 48.989
+      Attribute:
+        Attribute_Label: longitude
+        Attribute_Definition:
+          Longitude.
+
+          Geographic longitude in decimal degrees, NAD27.
+          Real numbers stored in double precision.
+        Attribute_Domain_Values:
+          Range_Domain:
+            Range_Domain_Minimum: -123.7124
+            Range_Domain_Maximum: -67.996
+      Attribute:
+        Attribute_Label: oremin
+        Attribute_Definition:
+          Asbestiform mineral(s) reported.
+
+          Notes on asbestiform minerals found at the site.
+          Textual values of no more than 254 characters.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: (no value)
+            Enumerated_Domain_Value_Definition:
+              Information not available for this record.
+              55 records have no value for oremin.
+      Attribute:
+        Attribute_Label: assocmin
+        Attribute_Definition:
+          Associated minerals reported.
+
+          Notes on non-asbestiform minerals found at the site.
+          Textual values of no more than 200 characters.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: (no value)
+            Enumerated_Domain_Value_Definition:
+              Information not available for this record.
+              58 records have no value for assocmin.
+      Attribute:
+        Attribute_Label: hostrock
+        Attribute_Definition:
+          Host rock(s) reported.
+
+          Types of rock in the deposit or unit hosting asbestiform minerals.
+          Textual values of no more than 200 characters.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: (no value)
+            Enumerated_Domain_Value_Definition:
+              Information not available for this record.
+              55 records have no value for hostrock.
+      Attribute:
+        Attribute_Label: source
+        Attribute_Definition:
+          Publication.
+
+          USGS identifier of the publication from which this particular
+          description was drawn.
+          Textual values of no more than 12 characters.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: (no value)
+            Enumerated_Domain_Value_Definition:
+              Information not available for this record.
+              109 records have no value for source.
+    Detailed_Description:
+      Entity_Type:
+        Entity_Type_Label: minerals
+        Entity_Type_Definition: Minerals reported at the site
+      Attribute:
+        Attribute_Label: rec_id
+        Attribute_Definition:
+          Site number.
+
+          Record identifier for a site description, applies only within this
+          database.
+          Integer values.
+          Int of width 4.
+        Attribute_Domain_Values:
+          Range_Domain:
+            Range_Domain_Minimum: 1
+            Range_Domain_Maximum: 1109
+            Attribute_Measurement_Resolution: 1
+      Attribute:
+        Attribute_Label: role
+        Attribute_Definition:
+          Role of mineral.
+
+          Role of mineral (asbestos or associated).
+          Textual values of no more than 16 characters.
+      Attribute:
+        Attribute_Label: name
+        Attribute_Definition:
+          Mineral name.
+
+          Mineral name.
+          Textual values of no more than 64 characters.
+    Detailed_Description:
+      Entity_Type:
+        Entity_Type_Label: reflink
+        Entity_Type_Definition: Links references to site descriptions
+      Attribute:
+        Attribute_Label: rec_id
+        Attribute_Definition:
+          Site number.
+
+          Record identifier for a site description, applies only within this
+          database.
+          Integer values.
+          Int of width 4.
+        Attribute_Domain_Values:
+          Range_Domain:
+            Range_Domain_Minimum: 1
+            Range_Domain_Maximum: 1109
+            Attribute_Measurement_Resolution: 1
+      Attribute:
+        Attribute_Label: citation
+        Attribute_Definition:
+          Short citation.
+
+          Short in-text citation, including page number.
+          Textual values of no more than 100 characters.
+      Attribute:
+        Attribute_Label: ref_id
+        Attribute_Definition:
+          Reference number.
+
+          Unique identifier for a bibliographic reference within this database.
+          Integer values.
+          Int of width 4.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: (no value)
+            Enumerated_Domain_Value_Definition:
+              Information not available for this record.
+              7 records have no value for ref_id.
+        Attribute_Domain_Values:
+          Range_Domain:
+            Range_Domain_Minimum: 1
+            Range_Domain_Maximum: 615
+            Attribute_Measurement_Resolution: 1
+    Detailed_Description:
+      Entity_Type:
+        Entity_Type_Label: ref
+        Entity_Type_Definition: Bibliographic references for the site descriptions
+      Attribute:
+        Attribute_Label: ref_id
+        Attribute_Definition:
+          Reference number.
+
+          Unique identifier for a bibliographic reference within this database.
+          Integer values.
+          Int of width 4.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: (no value)
+            Enumerated_Domain_Value_Definition:
+              Information not available for this record.
+              7 records have no value for ref_id.
+        Attribute_Domain_Values:
+          Range_Domain:
+            Range_Domain_Minimum: 1
+            Range_Domain_Maximum: 615
+            Attribute_Measurement_Resolution: 1
+      Attribute:
+        Attribute_Label: short_ref
+        Attribute_Definition:
+          Short citation.
+
+          Short in-text citation, not including page number.
+          Textual values of no more than 64 characters.
+      Attribute:
+        Attribute_Label: reference
+        Attribute_Definition:
+          Bibliographic reference.
+
+          Full bibliographic citation as found in USGS report bibliographies.
+          Textual values of no more than 254 characters.
+      Attribute:
+        Attribute_Label: onlink
+        Attribute_Definition:
+          Online linkage.
+
+          URL for the report, if online.
+          Textual values of no more than 128 characters.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: (no value)
+            Enumerated_Domain_Value_Definition:
+              Information not available for this record.
+              422 records have no value for onlink.
+      Attribute:
+        Attribute_Label: source
+        Attribute_Definition:
+          Publication.
+
+          USGS identifier of the publication from which this particular
+          reference was drawn.
+          Textual values of no more than 12 characters.
+        Attribute_Domain_Values:
+          Enumerated_Domain:
+            Enumerated_Domain_Value: (no value)
+            Enumerated_Domain_Value_Definition:
+              Information not available for this record.
+              109 records have no value for source.
+  Distribution_Information:
+    Distributor:
+      Contact_Information:
+        Contact_Person_Primary:
+          Contact_Person: Peter N Schweitzer
+          Contact_Organization: USGS ER GD
+        Contact_Position: Geologist
+        Contact_Address:
+          Address_Type: mailing address
+          Address: 12201 Sunrise Valley Drive
+          City: Reston
+          State_or_Province: VA
+          Postal_Code: 20192-0002
+          Country: USA
+        Contact_Voice_Telephone: 703-648-6533
+        Contact_Facsimile_Telephone: 703-648-6252
+        Contact_Electronic_Mail_Address: pschweitzer@usgs.gov
+    Resource_Description: Consolidated asbestos occurrence database
+    Distribution_Liability:
+      This report is preliminary and has not been reviewed for conformity
+      with U.S. Geological Survey editorial standards (or with the North
+      American Stratigraphic Code).  Any use of trade, product, or firm
+      names is for descriptive purposes only and does not imply endorsement
+      by the U.S. Government.
+    Standard_Order_Process:
+      Digital_Form:
+        Digital_Transfer_Information:
+          Format_Name: WMS
+          Format_Version_Number: 1.1.1
+          Format_Information_Content: Locations of asbestos mines, prospects and occurrences with mineralogy
+        Digital_Transfer_Option:
+          Online_Option:
+            Computer_Contact_Information:
+              Network_Address:
+                Network_Resource_Name: http://mrdata.usgs.gov/services/asbestos?request=GetCapabilities&service=WMS&version=1.1.1
+      Digital_Form:
+        Digital_Transfer_Information:
+          Format_Name: WFS
+          Format_Version_Number: 1.0.0
+          Format_Information_Content: Location and mineralogy of asbestos mines, prospects, and occurrences in the continental US
+        Digital_Transfer_Option:
+          Online_Option:
+            Computer_Contact_Information:
+              Network_Address:
+                Network_Resource_Name: http://mrdata.usgs.gov/wfs/asbestos?request=GetCapabilities&service=WFS&version=1.0.0
+      Digital_Form:
+        Digital_Transfer_Information:
+          Format_Name: Shapefile
+          Format_Version_Number: 1.0
+          Format_Information_Content: Locations and mineralogy of asbestos and fibrous amphibole deposits
+          File_Decompression_Technique: unzip
+        Digital_Transfer_Option:
+          Online_Option:
+            Computer_Contact_Information:
+              Network_Address:
+                Network_Resource_Name: http://mrdata.usgs.gov/asbestos/asbestos.zip
+      Digital_Form:
+        Digital_Transfer_Information:
+          Format_Name: CSV
+          Format_Information_Content:
+            Locations and mineralogy of asbestos and fibrous amphibole deposits
+            with references
+          File_Decompression_Technique: unzip
+        Digital_Transfer_Option:
+          Online_Option:
+            Computer_Contact_Information:
+              Network_Address:
+                Network_Resource_Name: http://mrdata.usgs.gov/asbestos/asbestos-csv.zip
+      Fees: none
+  Metadata_Reference_Information:
+    Metadata_Date: 20160209
+    Metadata_Contact:
+      Contact_Information:
+        Contact_Person_Primary:
+          Contact_Person: Peter N Schweitzer
+          Contact_Organization: USGS Eastern Mineral and Environmental Resources Science Center
+        Contact_Position: Geologist
+        Contact_Address:
+          Address_Type: mailing address
+          Address: 12201 Sunrise Valley Drive
+          City: Reston
+          State_or_Province: VA
+          Postal_Code: 20192-0002
+          Country: USA
+        Contact_Voice_Telephone: 703-648-6533
+        Contact_Facsimile_Telephone: 703-648-6252
+        Contact_Electronic_Mail_Address: pschweitzer@usgs.gov
+    Metadata_Standard_Name: Content Standard for Digital Geospatial Metadata
+    Metadata_Standard_Version: FGDC-STD-001-1998
