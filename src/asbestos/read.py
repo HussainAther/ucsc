@@ -10,13 +10,20 @@ Let's get down to business to defeat asbestos.
 
 df = pd.read_csv("data/asbestos/main.csv")
 
-fig, ax = plt.subplots(figsize=(100, 100))
-geometry = [Point(xy) for xy in zip(df["latitude"], df["longitude"])]
+geom = [Point(xy) for xy in zip(df["longitude"], df["latitude"])]
+gdf = gpd.GeoDataFrame(
+    df, geometry=geom)
 crs = {"init": "epsg:2263"} #http://www.spatialreference.org/ref/epsg/2263/
-gdf = gpd.GeoDataFrame(df, crs=crs, geometry=geometry)
+gdf = gpd.GeoDataFrame(df, crs=crs, geometry=geom)
 gdf.to_file(driver="ESRI Shapefile", filename="output/asbestos/data")
-world = gpd.read_file(gpd.datasets.get_path("naturalearth_lowres"))
 
-# We restrict to North America.
-ax = world[world.continent == "North America"].plot(
-    color="white", edgecolor='black')
+# Restrict to America.
+country = gpd.read_file("data/asbestos/gz_2010_us_040_00_5m.json")
+country = country[country["NAME"].isin(["Alaska","Hawaii"]) == False]
+
+# Plot.
+ax = country.plot(color="white", edgecolor="black")
+gdf.plot(ax=ax, color="red")
+
+# Save.
+plt.savefig("output/asbestos/usmap.png")
