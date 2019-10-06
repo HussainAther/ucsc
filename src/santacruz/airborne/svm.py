@@ -9,6 +9,7 @@ from sklearn import svm, datasets
 from sklearn.cross_validation import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report,confusion_matrix
+plt.style.use("seaborn-poster")
 
 """
 Support vector machine (SVM svm).
@@ -31,7 +32,7 @@ clf = SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
 
 def plot_confusion_matrix(cm, classes,
                           normalize=False,
-                          title='Confusion matrix',
+                          title="Confusion matrix",
                           cmap=plt.cm.Blues):
     """
     This function prints and plots the confusion matrix.
@@ -55,8 +56,8 @@ def plot_confusion_matrix(cm, classes,
                  color="white" if cm[i, j] > thresh else "black")
 
     plt.tight_layout()
-    plt.ylabel('True label')
-    plt.xlabel('Predicted label')
+    plt.ylabel("True label")
+    plt.xlabel("Predicted label")
     plt.show()
     
 # Plotting decision regions
@@ -83,6 +84,6 @@ def plot_desicion_boundary(X, y, clf, title = None):
     # highlight the support vectors
     #plt.scatter(clf.support_vectors_[:, 0], clf.support_vectors_[:, 1], s=80,
     #            facecolors='none', zorder=10)
-    plt.xlabel('Feature 1')
-    plt.ylabel('Feature 2')
+    plt.xlabel("Feature 1")
+    plt.ylabel("Feature 2")
     plt.show()
