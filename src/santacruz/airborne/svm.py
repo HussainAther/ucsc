@@ -6,7 +6,6 @@ import seaborn as sns
 
 from sklearn.svm import SVC 
 from sklearn import svm, datasets
-from sklearn.cross_validation import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report,confusion_matrix
 plt.style.use("seaborn-poster")
@@ -58,32 +57,41 @@ def plot_confusion_matrix(cm, classes,
     plt.tight_layout()
     plt.ylabel("True label")
     plt.xlabel("Predicted label")
-    plt.show()
+    plt.savefig("output/santacruz/airborne/confusion.png")
+    plt.close()
     
 # Plotting decision regions
 def plot_desicion_boundary(X, y, clf, title = None):
-    '''
+    """
     Helper function to plot the decision boundary for the SVM
-    '''
-    
+    """
     x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
     y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
     xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.1),
                          np.arange(y_min, y_max, 0.1))
-
     Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
     Z = Z.reshape(xx.shape)
-    
     plt.figure(figsize = (10, 8))
     plt.contourf(xx, yy, Z, alpha=0.4)
     plt.scatter(X[:, 0], X[:, 1], c=y, alpha=0.8)
-    
     if title is not None:
         plt.title(title)
-    
     # highlight the support vectors
     #plt.scatter(clf.support_vectors_[:, 0], clf.support_vectors_[:, 1], s=80,
     #            facecolors='none', zorder=10)
     plt.xlabel("Feature 1")
     plt.ylabel("Feature 2")
-    plt.show()
+    plt.savefig("output/santacruz/airborne/decisionboundary.png")
+    plt.close()
+
+# Predict results from the test data.
+predicted = clf.predict(X)
+
+# Plot the confusion matrix.
+cm = confusion_matrix(y,predicted)
+plot_confusion_matrix(cm, classes=iris.target_names,
+                      title="Confusion matrix, without normalization")
+
+# Plot the decision boundary.
+plot_desicion_boundary(X, y, clf)
+
