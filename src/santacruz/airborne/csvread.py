@@ -12,6 +12,7 @@ plot.savefig("output/santacruz/quadrangle.png")
 
 # K-Nearest neighbors clustering (kNN) with
 # greater circle distance as a metric to minimize.
+# Also kd-tree (kd tree kdtree).
 def valpoint(p):
     """
     Validate a point.
