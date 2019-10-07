@@ -4,9 +4,6 @@ import geopandas as gpd
 
 import matplotlib.pyplot as plt
 
-# Map map map!
-from shapely import wkt
-
 fp = "data/santacruz/usmin/poly.shp"
 
 gdf = gpd.read_file(fp, encoding="utf-8") 
@@ -27,14 +24,14 @@ plt.close()
 
 # Restrict to California.
 ca = country[country["NAME"].isin(["California"]) == True]
-gdf = gdf.loc[gdf["STATE"] == "CA"]
-geom = gdf["geometry"].apply(wkt.loads)
+cagdf = gdf.loc[gdf["STATE"] == "CA"]
+geom = [Point(xy) for xy in zip(ca["longitude"], ca["latitude"])]
 gdf = gpd.GeoDataFrame(
-    gdf, geometry=geom)
+    cagdf, geometry=geom)
 
 # Plot.
 ax = ca.plot(color="white", edgecolor="black")
 gdf.plot(ax=ax, color="red")
 
 # Save.
-plt.savefig("output/usmin/california.png")
+plt.savefig("output/santacruz/usmin/california.png")
