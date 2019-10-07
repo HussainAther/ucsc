@@ -18,7 +18,7 @@ with nickel and chromium mineralization.
 """
 
 # Read the .txt file as a pandas DataFrame df
-df = pd.read_csv("data/nicr/nicrpge.txt", sep="|", encoding = "ISO-8859-1")
+df = pd.read_csv("data/nicr/nicrpge.txt", sep="|", encoding = "ISO-8859-1").fillna(0)
 
 # Extract data of interest for the svm.
 y = [] # The target values of interest with a specific number assocaited with each target
