@@ -1,4 +1,4 @@
- Import numpy for number manipulation
+# Import numpy for number manipulation
 import numpy as np
 
 # Import pandas for data manipulation
@@ -20,16 +20,16 @@ df = pd.read_csv("data/nicr/nicrpge.txt", sep="|", encoding = "ISO-8859-1")
 y = [] # The target values of interest with a specific number assocaited with each target
 ynames = [] # Names for each target valuea
 count = 0 # Used for keeping track of each target
-for i in range(len(gdf["Commod_gp"])): # Use the "Commod_gp" column as targaet names
+for i in range(len(df["Commod_gp"])): # Use the "Commod_gp" column as targaet names
     if i in ynames:
         y.append(ynames.index(i))
     else:
         count += 1
         y.append(count)
         ynames.append(count)
-zipped = zip(gdf["WGS84_Lat"], gdf["WGS84_Lon"])
+zipped = zip(df["WGS84_Lat"], df["WGS84_Lon"])
 lat, long = zip(*zipped)
-X = [list(a) for a in zip(gdf["WGS84_Lat"], gdf["WGS84_Lon"])] # Features we test
+X = [list(a) for a in zip(df["WGS84_Lat"], df["WGS84_Lon"])] # Features we test
 target = ynames
 feature = ["WGS84_Lat", "WGS84_Lon"] # Feature names
 
