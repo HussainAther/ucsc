@@ -7,6 +7,7 @@ import pandas as pd
 # Map plotting tools
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
+import seaborn as sns
 
 from sklearn.svm import SVC 
 from sklearn.metrics import confusion_matrix
