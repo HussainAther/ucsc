@@ -97,7 +97,7 @@ def plot_desicion_boundary(X, y, clf, title = None):
 
 # # Look at the data.
 # plt.figure(figsize = (10,8))
-# for i, c, s in (zip(range(n_class), ["b", "g", "r"], ["o", "^", "*"])):
+# for i, c, s in (zip(range(3), ["b", "g", "r"], ["o", "^", "*"])):
 #     ix = y == i
 #     plt.scatter(X[:, 0][ix], X[:, 1][ix], color = c, marker = s, s = 60, label = target[i])
 # 
