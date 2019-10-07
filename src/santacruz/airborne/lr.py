@@ -16,7 +16,9 @@ raddf = pd.read_csv("data/santacruz/airborne/santa_cruz_rad.csv", index_col="fid
 magdf = pd.read_csv("data/santacruz/airborne/santa_cruz_mag.csv", index_col="fid", encoding="utf-8")
 
 # Extract data of interest for the lr.
-X = [list(a) for a in zip(magdf["latitude"], magdf["longitude"])] # features we test
+zipped = zip(magdf["latitude"], magdf["longitude"])
+lat, long = zipped(*zip)
+X = [list(a) for a in zipped] # features we test
 lab_enc = preprocessing.LabelEncoder() # label encoder
 y = magdf["diurnal"].values
 y = lab_enc.fit_transform(y)
@@ -70,26 +72,26 @@ ax_c = f.colorbar(contour)
 ax_c.set_label("$P(y = 1)$")
 ax_c.set_ticks([0, .25, .5, .75, 1])
 
-ax.scatter(X[100:,0], X[100:, 1], c=y[100:], s=50,
+ax.scatter(lat, long, c=y[100:], s=50,
            cmap="RdBu", vmin=-.2, vmax=1.2,
            edgecolor="white", linewidth=1)
 
 ax.set(aspect="equal",
        xlim=(-5, 5), ylim=(-5, 5),
-       xlabel="$X_1$", ylabel="$X_2$")
+       xlabel="Latitude", ylabel="Longitude")
 plt.savefig("output/santacruz/airborne/probgrid.png")
 
 # decision boundary
 f, ax = plt.subplots(figsize=(8, 6))
 ax.contour(xx, yy, probs, levels=[.5], cmap="Greys", vmin=0, vmax=.6)
 
-ax.scatter(X[100:,0], X[100:, 1], c=y[100:], s=50,
+ax.scatter(lat, long, c=y[100:], s=50,
            cmap="RdBu", vmin=-.2, vmax=1.2,
            edgecolor="white", linewidth=1)
 
 ax.set(aspect="equal",
        xlim=(-5, 5), ylim=(-5, 5),
-       xlabel="$X_1$", ylabel="$X_2$")
+       xlabel="Latitude", ylabel="Longitude")
 plt.savefig("output/santacruz/airaborne/decisionboundary.png")
 
 def plot_confusion_matrix(cm, classes,
