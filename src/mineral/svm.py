@@ -74,7 +74,7 @@ def plot_confusion_matrix(cm, classes,
     plt.close()
     
 # Plotting decision regions
-def plot_desicion_boundary(X, y, clf, title = None):
+def plot_decision_boundary(X, y, clf, title = None):
     """
     Helper function to plot the decision boundary for the SVM
     """
@@ -86,10 +86,7 @@ def plot_desicion_boundary(X, y, clf, title = None):
 
 # Look at the data.
 plt.figure(figsize = (10,8))
-for i, c, s in (zip(range(3), ["b", "g", "r"], ["o", "^", "*"])):
-    ix = y == i
-    plt.scatter(lat[ix], long[ix], color = c, marker = s, s = 60, label = target[i])
-
+gdf.plot()
 plt.legend(loc = 2, scatterpoints = 1)
 plt.xlabel("Latitude - " + feature[0])
 plt.ylabel("Longitude - " + feature[1])
@@ -104,4 +101,4 @@ plot_confusion_matrix(cm, classes=target,
                       title="Confusion matrix, without normalization")
 
 # Plot the decision boundary.
-plot_desicion_boundary(X, y, clf)
+plot_decision_boundary(X, y, clf)
