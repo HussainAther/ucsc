@@ -8,6 +8,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
+from sklearn.svm import SVC 
+from sklearn.metrics import confusion_matrix
+plt.style.use("seaborn-poster")
+
 """
 Extract information and draw trends from platinum-group elements (PGE)
 with nickel and chromium mineralization.

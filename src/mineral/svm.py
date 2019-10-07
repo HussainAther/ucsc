@@ -4,10 +4,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-import sys
 
 from sklearn.svm import SVC 
-from sklearn.metrics import classification_report,confusion_matrix
+from sklearn.metrics import confusion_matrix
 plt.style.use("seaborn-poster")
 
 # Read input data.
