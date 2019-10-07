@@ -23,4 +23,4 @@ y = lab_enc.fit_transform(y)
 feature = ["latitude", "longitude"] # feature names
 
 clf = LogisticRegression(random_state=0, solver="lbfgs",
-    multi_class="multinomial").fit(X, y)
+    multi_class="multinomial", max_iter=1000).fit(X, y)
