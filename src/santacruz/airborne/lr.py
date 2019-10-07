@@ -17,7 +17,7 @@ magdf = pd.read_csv("data/santacruz/airborne/santa_cruz_mag.csv", index_col="fid
 
 # Extract data of interest for the lr.
 zipped = zip(magdf["latitude"], magdf["longitude"])
-lat, long = zipped(*zip)
+lat, long = zip(*zipped)
 X = [list(a) for a in zipped] # features we test
 lab_enc = preprocessing.LabelEncoder() # label encoder
 y = magdf["diurnal"].values
