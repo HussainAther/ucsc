@@ -27,6 +27,8 @@ for i in range(len(gdf["plant_min"])): # Use the "plant_min" column as targaet n
         count += 1
         y.append(count)
         ynames.append(count)
+zipped = zip(gdf["latitude"], gdf["longitude"])
+lat, long = zip(*zipped)
 X = [list(a) for a in zip(gdf["latitude"], gdf["longitude"])] # Features we test
 target = ynames
 feature = ["latitude", "longitude"] # Feature names
@@ -76,8 +78,8 @@ def plot_desicion_boundary(X, y, clf, title = None):
     """
     Helper function to plot the decision boundary for the SVM
     """
-    x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
-    y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    x_min, x_max = lat.min() - 1, lat.max() + 1
+    y_min, y_max = long.min() - 1, long.max() + 1
     xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.1),
                          np.arange(y_min, y_max, 0.1))
     Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
@@ -86,7 +88,7 @@ def plot_desicion_boundary(X, y, clf, title = None):
 plt.figure(figsize = (10,8))
 for i, c, s in (zip(range(3), ["b", "g", "r"], ["o", "^", "*"])):
     ix = y == i
-    plt.scatter(X[:, 0][ix], X[:, 1][ix], color = c, marker = s, s = 60, label = target[i])
+    plt.scatter(lat[ix], long[ix], color = c, marker = s, s = 60, label = target[i])
 
 plt.legend(loc = 2, scatterpoints = 1)
 plt.xlabel("Latitude - " + feature[0])
