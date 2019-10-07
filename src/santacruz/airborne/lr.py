@@ -26,7 +26,7 @@ feature = ["latitude", "longitude"] # feature names
 
 # Perform logistic regression.
 clf = LogisticRegression(random_state=0, solver="lbfgs",
-    multi_class="multinomial", max_iter=1000).fit(X, y)
+    multi_class="multinomial", max_iter=10000).fit(X, y)
 
 # Extract probabilities.
 xx, yy = np.mgrid[-5:5:.01, -5:5:.01]
