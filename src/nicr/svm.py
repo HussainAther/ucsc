@@ -37,6 +37,9 @@ lat, long = zip(*zipped)
 X = [list(a) for a in zip(df["WGS84_Lat"], df["WGS84_Lon"])] # Features we test
 target = ynames
 feature = ["WGS84_Lat", "WGS84_Lon"] # Feature names
+df["Latitude"] = df["WGS84_Lat"]
+df["Longitude"] = df["WGS84_Lon"]
+df["Mineral"] = df["Commod_gp"]
 
 # Let's get machine learning in this joint. 
 clf = SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
@@ -90,7 +93,7 @@ def plot_desicion_boundary(X, y, clf, title = None):
 
 # Look at the data.
 plt.figure(figsize = (10,8))
-sns.scatterplot(zip(df["WGS84_Lat"], df["WGS84_Lon"]), hue="Commod_gp")
+ax = sns.scatterplot(x="Latitude", y="Longitude", hue="Mineral", data=df)
 plt.legend(loc = 2, scatterpoints = 1)
 plt.xlabel("Latitude - " + feature[0])
 plt.ylabel("Longitude - " + feature[1])
