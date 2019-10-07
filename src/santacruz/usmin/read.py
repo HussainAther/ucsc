@@ -1,20 +1,15 @@
 import shapefile
-import sys
 import numpy as np
 import geopandas as gpd
 
-import matplotlib
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 
 # Map map map!
-from mpl_toolkits.basemap import Basemap 
-from matplotlib.colors import rgb2hex
-from matplotlib.patches import Polygon
+from shapely import wkt
 
 fp = "data/santacruz/usmin/poly.shp"
 
-gdf = gpd.read_file(fp) 
+gdf = gpd.read_file(fp, encoding="utf-8") 
 
 # Restrict to America.
 country = gpd.read_file("data/gz_2010_us_040_00_5m.json")
@@ -33,7 +28,7 @@ plt.close()
 # Restrict to California.
 ca = country[country["NAME"].isin(["California"]) == True]
 gdf = gdf.loc[gdf["STATE"] == "CA"]
-geom = [Point(x) for x in gdf["geometry"]]
+geom = gdf["geometry"].apply(wkt.loads)
 gdf = gpd.GeoDataFrame(
     gdf, geometry=geom)
 
