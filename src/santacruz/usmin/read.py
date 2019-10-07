@@ -30,7 +30,7 @@ gdf = gpd.GeoDataFrame(
 
 # Plot.
 ax = ca.plot(color="white", edgecolor="black")
-gdf.plot(ax=ax, color="red")
+cagdf.plot(ax=ax, color="red")
 
 # Save.
 plt.savefig("output/santacruz/usmin/california.png")
