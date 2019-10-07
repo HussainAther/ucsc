@@ -85,10 +85,7 @@ def plot_desicion_boundary(X, y, clf, title = None):
 
 # Look at the data.
 plt.figure(figsize = (10,8))
-for i, c, s in (zip(range(3), ["b", "g", "r"], ["o", "^", "*"])):
-    ix = y == i
-    plt.scatter(lat[ix], long[ix], color = c, marker = s, s = 60, label = target[i])
-
+sns.scatterplot(df, hue="Commod_gp")
 plt.legend(loc = 2, scatterpoints = 1)
 plt.xlabel("Latitude - " + feature[0])
 plt.ylabel("Longitude - " + feature[1])
