@@ -33,9 +33,9 @@ feature = ["latitude", "longitude"] # Feature names
 
 # Let's get machine learning in this joint. 
 clf = SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-  decision_function_shape=None, degree=3, gamma="auto", kernel="rbf",
-  max_iter=-1, probability=False, random_state=None, shrinking=True,
-  tol=0.001, verbose=False)
+    decision_function_shape=None, degree=3, gamma="auto", kernel="rbf",
+    max_iter=-1, probability=False, random_state=None, shrinking=True,
+    tol=0.001, verbose=False)
 
 # Fit.
 clf.fit(X,y)
@@ -95,16 +95,16 @@ def plot_desicion_boundary(X, y, clf, title = None):
     plt.savefig("output/santacruz/airborne/decisionboundary.png")
     plt.close()
 
-# Look at the data.
-plt.figure(figsize = (10,8))
-for i, c, s in (zip(range(n_class), ["b", "g", "r"], ["o", "^", "*"])):
-    ix = y == i
-    plt.scatter(X[:, 0][ix], X[:, 1][ix], color = c, marker = s, s = 60, label = target[i])
-
-plt.legend(loc = 2, scatterpoints = 1)
-plt.xlabel("Latitude - " + feature[0])
-plt.ylabel("Longitude - " + feature[1])
-plt.show()
+# # Look at the data.
+# plt.figure(figsize = (10,8))
+# for i, c, s in (zip(range(n_class), ["b", "g", "r"], ["o", "^", "*"])):
+#     ix = y == i
+#     plt.scatter(X[:, 0][ix], X[:, 1][ix], color = c, marker = s, s = 60, label = target[i])
+# 
+# plt.legend(loc = 2, scatterpoints = 1)
+# plt.xlabel("Latitude - " + feature[0])
+# plt.ylabel("Longitude - " + feature[1])
+# plt.savefig("output/santacruz/airborne/plot.png")
 
 # Predict results from the test data.
 predicted = clf.predict(X)
