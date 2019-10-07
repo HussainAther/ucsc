@@ -19,9 +19,9 @@ raddf = pd.read_csv("data/santacruz/airborne/santa_cruz_rad.csv", index_col="fid
 magdf = pd.read_csv("data/santacruz/airborne/santa_cruz_mag.csv", index_col="fid", encoding="utf-8")
 
 # Extract data of interest for the svm.
-y = []
-ynames = []
-count = 0
+y = [] # The target values of interest with a specific number assocaited with each target
+ynames = [] # Names for each target valuea
+count = 0 # Used for keeping track of each target
 for i in range(len(magdf["geology"])):
     if i in ynames:
         y.append(ynames.index(i))
@@ -29,9 +29,10 @@ for i in range(len(magdf["geology"])):
         count += 1
         y.append(count)
         ynames.append(count)
-X = [list(a) for a in zip(magdf["latitude"], magdf["longitude"])]
+X = [list(a) for a in zip(magdf["latitude"], magdf["longitude"])] # Features we test
 target = ynames
-feature = ["latitude", "longitude", "radaralt", "totmag", "resmag", "resmagCM4"]
+feature = ["latitude", "longitude"] # Feature names
+
 # Let's get machine learning in this joint. 
 clf = SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
   decision_function_shape=None, degree=3, gamma="auto", kernel="rbf",
@@ -90,9 +91,9 @@ def plot_desicion_boundary(X, y, clf, title = None):
         plt.title(title)
     # highlight the support vectors
     #plt.scatter(clf.support_vectors_[:, 0], clf.support_vectors_[:, 1], s=80,
-    #            facecolors='none', zorder=10)
-    plt.xlabel("Feature 1")
-    plt.ylabel("Feature 2")
+    #            facecolors="none", zorder=10)
+    plt.xlabel("Latitude")
+    plt.ylabel("Longitude")
     plt.savefig("output/santacruz/airborne/decisionboundary.png")
     plt.close()
 
