@@ -25,9 +25,8 @@ plt.close()
 # Restrict to California.
 ca = country[country["NAME"].isin(["California"]) == True]
 cagdf = gdf.loc[gdf["STATE"] == "CA"]
-geom = [Point(xy) for xy in zip(ca["longitude"], ca["latitude"])]
 gdf = gpd.GeoDataFrame(
-    cagdf, geometry=geom)
+    cagdf, geometry=ca["geometry"])
 
 # Plot.
 ax = ca.plot(color="white", edgecolor="black")
