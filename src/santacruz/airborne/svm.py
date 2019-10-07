@@ -5,8 +5,6 @@ import pandas as pd
 import seaborn as sns
 
 from sklearn.svm import SVC 
-from sklearn import svm, datasets
-from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report,confusion_matrix
 plt.style.use("seaborn-poster")
 
