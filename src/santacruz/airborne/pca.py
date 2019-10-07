@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-from sklearn import datasets, decomposition
+from mpl_toolkits.mplot3d import Axes3D
+from sklearn import decomposition
 
 """
 Principal Component Analysis (PCA pca).
@@ -32,7 +33,7 @@ fig = plt.figure(1, figsize=(4, 3))
 plt.clf()
 ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
 plt.cla()
-pca = decomposition.PCA(n_components=3)
+pca = decomposition.PCA(n_components=2)
 pca.fit(X)
 X = pca.transform(X)
 
