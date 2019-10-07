@@ -72,7 +72,7 @@ ax_c = f.colorbar(contour)
 ax_c.set_label("$P(y = 1)$")
 ax_c.set_ticks([0, .25, .5, .75, 1])
 
-ax.scatter(lat, long, c=y[100:], s=50,
+ax.scatter(lat, long, c=y, s=50,
            cmap="RdBu", vmin=-.2, vmax=1.2,
            edgecolor="white", linewidth=1)
 
