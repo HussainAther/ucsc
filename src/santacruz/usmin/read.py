@@ -32,7 +32,7 @@ plt.close()
 
 # Restrict to California.
 ca = country[country["NAME"].isin(["California"]) == True]
-gdf = gdf.loc[gdf["state"] == "CA"]
+gdf = gdf.loc[gdf["STATE"] == "CA"]
 geom = [Point(x) for x in gdf["geometry"]]
 gdf = gpd.GeoDataFrame(
     gdf, geometry=geom)
