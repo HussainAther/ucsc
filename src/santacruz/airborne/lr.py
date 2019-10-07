@@ -82,48 +82,7 @@ ax.set(aspect="equal",
 plt.savefig("output/santacruz/airborne/probgrid.png")
 
 # decision boundary
-f, ax = plt.subplots(figsize=(8, 6))
-ax.contour(xx, yy, probs, levels=[.5], cmap="Greys", vmin=0, vmax=.6)
-
-ax.scatter(lat, long, c=y[100:], s=50,
-           cmap="RdBu", vmin=-.2, vmax=1.2,
-           edgecolor="white", linewidth=1)
-
-ax.set(aspect="equal",
-       xlim=(-5, 5), ylim=(-5, 5),
-       xlabel="Latitude", ylabel="Longitude")
-plt.savefig("output/santacruz/airaborne/decisionboundary.png")
-
-def plot_confusion_matrix(cm, classes,
-                          normalize=False,
-                          title="Confusion matrix",
-                          cmap=plt.cm.Blues):
-    """
-    This function prints and plots the confusion matrix.
-    Normalization can be applied by setting `normalize=True`.
-    """
-    fig = plt.figure(figsize=(10, 8)) 
-    plt.imshow(cm, interpolation='nearest', cmap=cmap)
-    plt.title(title)
-    plt.colorbar()
-    tick_marks = np.arange(len(classes))
-    plt.xticks(tick_marks, classes, rotation=45)
-    plt.yticks(tick_marks, classes)
-
-    if normalize:
-        cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
-
-    thresh = cm.max() / 2.
-    for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
-        plt.text(j, i, cm[i, j],
-                 horizontalalignment="center",
-                 color="white" if cm[i, j] > thresh else "black")
-
-    plt.tight_layout()
-    plt.ylabel("True label")
-    plt.xlabel("Predicted label")
-    plt.savefig("output/santacruz/airborne/confusion.png")
-    plt.close()
+plt.close()
 
 # Predict results from the test data.
 predicted = clf.predict(X)
