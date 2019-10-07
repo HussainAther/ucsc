@@ -66,3 +66,41 @@ def plot_confusion_matrix(cm, classes,
         plt.text(j, i, cm[i, j],
                  horizontalalignment="center",
                  color="white" if cm[i, j] > thresh else "black")
+    plt.tight_layout()
+    plt.ylabel("True label")
+    plt.xlabel("Predicted label")
+    plt.savefig("output/nicr/confusion.png")
+    plt.close()
+    
+# Plotting decision regions
+def plot_desicion_boundary(X, y, clf, title = None):
+    """
+    Helper function to plot the decision boundary for the SVM
+    """
+    x_min, x_max = lat.min() - 1, lat.max() + 1
+    y_min, y_max = long.min() - 1, long.max() + 1
+    xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.1),
+                         np.arange(y_min, y_max, 0.1))
+    Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
+
+# Look at the data.
+plt.figure(figsize = (10,8))
+for i, c, s in (zip(range(3), ["b", "g", "r"], ["o", "^", "*"])):
+    ix = y == i
+    plt.scatter(lat[ix], long[ix], color = c, marker = s, s = 60, label = target[i])
+
+plt.legend(loc = 2, scatterpoints = 1)
+plt.xlabel("Latitude - " + feature[0])
+plt.ylabel("Longitude - " + feature[1])
+plt.savefig("output/nicr/plot.png")
+
+# Predict results from the test data.
+predicted = clf.predict(X)
+
+# Plot the confusion matrix.
+cm = confusion_matrix(y,predicted)
+plot_confusion_matrix(cm, classes=target,
+                      title="Confusion matrix, without normalization")
+
+# Plot the decision boundary.
+plot_desicion_boundary(X, y, clf)
