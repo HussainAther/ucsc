@@ -1,4 +1,4 @@
-o = open("data/santacruz/isostatic/iso.csv", "w")
+import pandas as pd
 
 """
 Retain the relevant information as we extract it
@@ -21,3 +21,9 @@ with open("data/santacruz/isostatic/iso.dec", "r") as file:
             elif len(line.split()) == 13:
                 linelist.append(line.split()[:-2] + [""] + line.split()[-2:])
 
+df = pd.DataFrame.from_records(linelist)
+df.columns = ["stationname", "latdeg", "latmin", "londeg", "lonmin", "elevation", "observedgravity", "freeairanomaly",
+              "simplebougaranomaly", "innerterraincorrection", "totalterraincorrection", "correctionextent", 
+              "completebougaranomaly", "isostaticresidualanomaly"]
+df = df.set_index("stationname")
+df.to_csv("data/santacruz/isostatic/iso.csv") 
