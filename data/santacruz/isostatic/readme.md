@@ -43,8 +43,7 @@ TC CODE(a1)......................Letter denoting the extent of the correction, a
 CBA(f8.3)........................Complete Bouguer anomaly reduced for a density of 2.67 g/cc, to 0.01 mGal.
 ISO(f8.3)........................Isostatic residual anomaly values assuming an Airy model for isostatic compensation of topographic loads. 
 
-This
-model assumes a a crustal thickness of 25 km, a topographic load density
+This model assumes a a crustal thickness of 25 km, a topographic load density
 of 2.67 g/cc, and a density contrast across the base of the model crust
 of 0.4 g/cc. Example of format for gravity file61990879 36 30.89 121
 52.43 1115.0 979795.58 37.73 -0.29 2.29 9.27 D 8.52 -15.83STATION NAME:
