@@ -26,27 +26,24 @@ SOUTO01-SOUTO055, W1-W8, and CRONYN01-CRONYN80. Stations with the name
 "contour" lack observed gravity information because these locations were
 digitized from simple Bouguer gravity contour-trackline intersections
 (Chapman and others, 1990) and then reduced to complete Bouguer and
-isostatic anomalies. EXPLANATION OF PRINCIPAL FACT FORMATItem
-ExplanationSTATION NAME (a8) ................An alphanumeric combination
-of up to 8 characters used for station identificationLAT
-(f3.0,f6.3)...................Latitude in degrees and minutes, to 0.01
-minuteLON (f4.0,f6.3)...................Longitude in degrees and
-minutes, to 0.01 minuteELEV (f8.2).......................Elevation, to
-0.1 ftOG (f10.3).........................Observed gravity, to 0.01
-mGalFAA (f9.3) .......................Free-air anomaly to 0.01 mGalSBA
-(f8.3)........................Simple Bouguer anomaly to 0.01 mGalITC
-(f7.3)........................Inner terrain correction for a density of
-2.67 g/cc, to 0.01 mGal, followed by a letter denoting the extent of the
-correction. "Z" indicates computer terrain correction from the station
-out to 166.7 km with inner terrain correction out to Hayford D zone.TC
-(f7.3).........................Total terrain correction from the station
-to 166.7 km for a density of 2.67 g/cc, to 0.01 mGal.TC CODE
-(a1)......................Letter denoting the extent of the correction,
-according to the Hayford-Bowie template (e.g. 'D' means 590 meters).CBA
-(f8.3)........................Complete Bouguer anomaly reduced for a
-density of 2.67 g/cc, to 0.01 mGal.ISO
-(f8.3)........................Isostatic residual anomaly values assuming
-an Airy model for isostatic compensation of topographic loads. This
+isostatic anomalies. 
+
+EXPLANATION OF PRINCIPAL FACT FORMAT
+ItemExplanation
+STATION NAME (a8) ................An alphanumeric combination of up to 8 characters used for station identification
+LAT(f3.0,f6.3)...................Latitude in degrees and minutes, to 0.01minute
+LON (f4.0,f6.3)...................Longitude in degrees and minutes, to 0.01 minute
+ELEV (f8.2).......................Elevation, to 0.1 ft
+OG (f10.3).........................Observed gravity, to 0.01mGal
+FAA (f9.3) .......................Free-air anomaly to 0.01 mGal
+SBA(f8.3)........................Simple Bouguer anomaly to 0.01mGal
+ITC(f7.3)........................Inner terrain correction for a density of 2.67 g/cc, to 0.01 mGal, followed by a letter denoting the extent of the correction. "Z" indicates computer terrain correction from the station out to 166.7 km with inner terrain correction out to Hayford D zone.
+TC(f7.3).........................Total terrain correction from the station to 166.7 km for a density of 2.67 g/cc, to 0.01 mGal.
+TC CODE(a1)......................Letter denoting the extent of the correction, according to the Hayford-Bowie template (e.g. 'D' means 590 meters).
+CBA(f8.3)........................Complete Bouguer anomaly reduced for a density of 2.67 g/cc, to 0.01 mGal.
+ISO(f8.3)........................Isostatic residual anomaly values assuming an Airy model for isostatic compensation of topographic loads. 
+
+This
 model assumes a a crustal thickness of 25 km, a topographic load density
 of 2.67 g/cc, and a density contrast across the base of the model crust
 of 0.4 g/cc. Example of format for gravity file61990879 36 30.89 121
