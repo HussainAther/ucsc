@@ -1,12 +1,13 @@
+import chart_studio
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import plotly
-import plotly.plotly as py
 
+from chart_studio.plotly import plot, iplot
 from IPython.display import IFrame    
 
-plotly.tools.set_credentials_file(username='SHussainAther', api_key='NIq3xfEuGHKtywGFRr0c')
+chart_studio.tools.set_credentials_file(username='SHussainAther', api_key='NIq3xfEuGHKtywGFRr0c')
 
 """
 It's like Minecraft except not.
@@ -140,7 +141,8 @@ usminedconsumption = pd.concat([usmined.loc[usmined.Value == "AluminaConsumption
 usminedconsumption = usminedconsumption.transpose()
 usminedconsumption.columns = usminedconsumption.iloc[0]
 usminedconsumption = usminedconsumption[1:]
-usminedconsumption.iplot(kind="scatter", filename="U.S. Mined Consumption")
+usmcdict = usminedconsumption.to_dict()
+iplot(usmcdict, kind="scatter", filename="U.S. Mined Consumption")
 
 usminedproduction = pd.concat([usmined.loc[usmined.Value == "AluminaProduction"],
                            usmined.loc[usmined.Value == "BariteProduction"],
@@ -158,7 +160,8 @@ usminedproduction = pd.concat([usmined.loc[usmined.Value == "AluminaProduction"]
 usminedproduction = usminedproduction.transpose()
 usminedproduction.columns = usminedproduction.iloc[0]
 usminedproduction = usminedproduction[1:]
-usminedproduction.iplot(kind="scatter", filename="U.S. Mined Production")
+usmpdict = usminedproduction.to_dict()
+iplot(usmpdict, kind="scatter", filename="U.S. Mined Production")
 
 minecom = [ # Mined commodities
     "Antimony",
