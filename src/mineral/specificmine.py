@@ -26,23 +26,13 @@ for df in alldf:
     outhtml.write(pd.DataFrame.to_html(df, index=False))
     outhtml.write("\n")
 
-usmined = pd.read_csv("data/mineral/csv/USMined.csv")
+plt.figure()
+plt.plot("Year", "Worldmineproduction", data=cu, color="#FAFAD2", label="Mined Copper")
+plt.plot("Year", "Worldrefinedproduction", data=cu2, color="#FFD700", label="Refined Copper")
+plt.plot("Year", "Worldsecondaryproduction", data=cu3, color="#DAA520", label="Secondary Copper")
+plt.plot("Year", "Worldrefinedelectrowonproduction", data=cu4, color="#FF8C00", label="Refined Electrowon Copper")
+plt.savefig("output/mineral/copperprod.png")
+plt.close()
 
-usminedconsumption = pd.concat([usmined.loc[usmined.Value == "IronConsumption"],
-                           usmined.loc[usmined.Value == "CopperConsumption"],
-                           usmined.loc[usmined.Value == "MolybdenumConsumption"],
-                           usmined.loc[usmined.Value == "TantalumConsumption"]])
-usminedconsumption = usminedconsumption.transpose()
-usminedconsumption.columns = usminedconsumption.iloc[0]
-usminedconsumption = usminedconsumption[1:]
-
-# Plot.
-plt.plot(["2005", "2006", "2007", "2008", "2009"],
-             list(usminedconsumption["IronConsumption"].values)) 
-plt.plot(["2005", "2006", "2007", "2008", "2009"],
-             list(usminedconsumption["CopperConsumption"].values)) 
-plt.plot(["2005", "2006", "2007", "2008", "2009"],
-             list(usminedconsumption["MolybdenumConsumption"].values)) 
-plt.plot(["2005", "2006", "2007", "2008", "2009"],
-             list(usminedconsumption["TantalumConsumption"].values))
-plt.savefig("output/mineral/specificgraph.png") 
+plt.figure()
+plt.plot("Year", "Worldmineproduction", data=fe, color="b", label="Iron")
