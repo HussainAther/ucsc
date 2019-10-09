@@ -26,13 +26,28 @@ for df in alldf:
     outhtml.write(pd.DataFrame.to_html(df, index=False))
     outhtml.write("\n")
 
-plt.figure()
+fig = plt.figure()
+ax = fig.add_subplot()
+range1 = [float(i) for i in cu["Worldmineproduction"].str.replace(",", "").values]
+range2 = [float(i) for i in cu3["Worldrefinedsecondaryproduction"].str.replace(",", "").values]
+range1 = [int(i) for i in range1]
+range2 = [int(i) for i in range2]
+miny = min(range1) 
+maxy = max(range2)
+plt.yticks(np.arange(1000, 10000, 1000))
 plt.plot("Year", "Worldmineproduction", data=cu, color="#FAFAD2", label="Mined Copper")
 plt.plot("Year", "Worldrefinedproduction", data=cu2, color="#FFD700", label="Refined Copper")
-plt.plot("Year", "Worldsecondaryproduction", data=cu3, color="#DAA520", label="Secondary Copper")
+plt.plot("Year", "Worldrefinedsecondaryproduction", data=cu3, color="#DAA520", label="Secondary Copper")
 plt.plot("Year", "Worldrefinedelectrowonproduction", data=cu4, color="#FF8C00", label="Refined Electrowon Copper")
 plt.savefig("output/mineral/copperprod.png")
 plt.close()
 
-plt.figure()
+fig = plt.figure()
+ax = fig.add_subplot()
+ax.set_yscale("log")
 plt.plot("Year", "Worldmineproduction", data=fe, color="b", label="Iron")
+plt.plot("Year", "Worldmineproduction", data=cu, color="y", label="Mined Copper")
+plt.plot("Year", "Worldmineproduction", data=mo, color="g", label="Molybdenum")
+plt.plot("Year", "Worldmineproduction", data=mo, color="r", label="Tantalum")
+plt.savefig("output/mineral/specificprod.png")
+plt.close()
