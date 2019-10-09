@@ -34,11 +34,12 @@ range1 = [int(i) for i in range1]
 range2 = [int(i) for i in range2]
 miny = min(range1) 
 maxy = max(range2)
-plt.yticks(np.arange(1000, 10000, 1000))
 plt.plot("Year", "Worldmineproduction", data=cu, color="#FAFAD2", label="Mined Copper")
 plt.plot("Year", "Worldrefinedproduction", data=cu2, color="#FFD700", label="Refined Copper")
 plt.plot("Year", "Worldrefinedsecondaryproduction", data=cu3, color="#DAA520", label="Secondary Copper")
 plt.plot("Year", "Worldrefinedelectrowonproduction", data=cu4, color="#FF8C00", label="Refined Electrowon Copper")
+plt.yticks(ticks=np.arange(50)) 
+#           labels=["Mined Copper", "Refined Copper", "Secondary Copper", "Refined Electrowon Copper"])
 plt.savefig("output/mineral/copperprod.png")
 plt.close()
 
