@@ -13,7 +13,7 @@ co2 = pd.read_csv("data/mineral/csv/Cobalt2.csv")
 fsi = pd.read_csv("data/mineral/csv/Ferrosilicon.csv")
 ta = pd.read_csv("data/mineral/csv/Tantalum.csv")
 
-alldf = [bau, co, co2, fsi, tau]
+alldf = [bau, co, co2, fsi, ta]
 
 outjson = open("output/mineral/specificall.json", "w")
 outhtml = open("output/mineral/specificall.html", "w")
