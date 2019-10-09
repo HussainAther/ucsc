@@ -26,26 +26,34 @@ for df in alldf:
     outhtml.write(pd.DataFrame.to_html(df, index=False))
     outhtml.write("\n")
 
+# range1 = [float(i) for i in cu["Worldmineproduction"].str.replace(",", "").values]
+# range2 = [float(i) for i in cu3["Worldrefinedsecondaryproduction"].str.replace(",", "").values]
+# range1 = [int(i) for i in range1]
+# range2 = [int(i) for i in range2]
+# miny = min(range1) 
+# maxy = max(range2)
+
 fig = plt.figure()
 ax = fig.add_subplot()
-range1 = [float(i) for i in cu["Worldmineproduction"].str.replace(",", "").values]
-range2 = [float(i) for i in cu3["Worldrefinedsecondaryproduction"].str.replace(",", "").values]
-range1 = [int(i) for i in range1]
-range2 = [int(i) for i in range2]
-miny = min(range1) 
-maxy = max(range2)
-plt.plot("Year", "Worldmineproduction", data=cu, color="#FAFAD2", label="Mined Copper")
+cu["Year"] = [int(i) for i in cu["Year"].values]
+cu2["Year"] = [int(i) for i in cu2["Year"].values]
+cu3["Year"] = [int(i) for i in cu3["Year"].values]
+cu4["Year"] = [int(i) for i in cu4["Year"].values]
+plt.plot("Year", "Worldmineproduction", data=cu, color="#ffff00", label="Mined Copper")
 plt.plot("Year", "Worldrefinedproduction", data=cu2, color="#FFD700", label="Refined Copper")
 plt.plot("Year", "Worldrefinedsecondaryproduction", data=cu3, color="#DAA520", label="Secondary Copper")
 plt.plot("Year", "Worldrefinedelectrowonproduction", data=cu4, color="#FF8C00", label="Refined Electrowon Copper")
-plt.yticks(ticks=np.arange(50)) 
-#           labels=["Mined Copper", "Refined Copper", "Secondary Copper", "Refined Electrowon Copper"])
+plt.title("World Production of Types of Copper")
+plt.legend(loc=0)
+plt.xlabel("Year")
+plt.ylabel("Thousand metric tons")
+plt.xticks(range(1990, 2011, 4))
+#plt.yticks(range(10, 100, 10))
 plt.savefig("output/mineral/copperprod.png")
 plt.close()
 
 fig = plt.figure()
 ax = fig.add_subplot()
-ax.set_yscale("log")
 plt.plot("Year", "Worldmineproduction", data=fe, color="b", label="Iron")
 plt.plot("Year", "Worldmineproduction", data=cu, color="y", label="Mined Copper")
 plt.plot("Year", "Worldmineproduction", data=mo, color="g", label="Molybdenum")
