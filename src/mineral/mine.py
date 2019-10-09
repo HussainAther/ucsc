@@ -141,6 +141,7 @@ usminedconsumption = pd.concat([usmined.loc[usmined.Value == "AluminaConsumption
 usminedconsumption = usminedconsumption.transpose()
 usminedconsumption.columns = usminedconsumption.iloc[0]
 usminedconsumption = usminedconsumption[1:]
+
 usmcdict = usminedconsumption.to_dict()
 iplot(usmcdict, kind="scatter", filename="U.S. Mined Consumption")
 
