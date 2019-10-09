@@ -48,7 +48,7 @@ plt.legend(loc=0)
 plt.xlabel("Year")
 plt.ylabel("Thousand metric tons")
 plt.xticks(range(1990, 2011, 4))
-#plt.yticks(range(10, 100, 10))
+plt.yticks(range(1000, 18000, 1000))
 plt.savefig("output/mineral/copperprod.png")
 plt.close()
 
