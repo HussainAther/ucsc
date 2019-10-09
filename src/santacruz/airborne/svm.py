@@ -18,7 +18,7 @@ magdf = pd.read_csv("data/santacruz/airborne/santa_cruz_mag.csv", index_col="fid
 
 # Extract data of interest for the svm.
 y = [] # The target values of interest with a specific number assocaited with each target
-ynames = [] # Names for each target valuea
+ynames = [] # Names for each target value
 count = 0 # Used for keeping track of each target
 for i in range(len(magdf["geology"])):
     if i in ynames:
