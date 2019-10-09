@@ -44,4 +44,5 @@ plt.scatter(["2005", "2006", "2007", "2008", "2009"],
 plt.scatter(["2005", "2006", "2007", "2008", "2009"],
              list(usminedconsumption["MolybdenumConsumption"].values)) 
 plt.scatter(["2005", "2006", "2007", "2008", "2009"],
-             list(usminedconsumption["TantalumConsumption"].values)) 
+             list(usminedconsumption["TantalumConsumption"].values))
+plt.savefig("output/mineral/specificgraph.png") 
