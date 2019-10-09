@@ -7,15 +7,15 @@ I wish it were Minecraft.
 """
 
 # Read 'em in!
+au = pd.read_csv("data/mineral/csv/Gold.csv")
 fe = pd.read_csv("data/mineral/csv/Iron.csv")
 cu = pd.read_csv("data/mineral/csv/Copper.csv")
 cu2 = pd.read_csv("data/mineral/csv/Copper2.csv")
 cu3 = pd.read_csv("data/mineral/csv/Copper3.csv")
 cu4 = pd.read_csv("data/mineral/csv/Copper4.csv")
-mo = pd.read_csv("data/mineral/csv/Molybdenum.csv")
 ta = pd.read_csv("data/mineral/csv/Tantalum.csv")
 
-alldf = [fe, cu, cu2, cu3, cu4, mo, ta]
+alldf = [au, fe, cu, cu2, cu3, cu4, ta]
 
 outjson = open("output/mineral/specificall.json", "w")
 outhtml = open("output/mineral/specificall.html", "w")
@@ -55,8 +55,14 @@ plt.close()
 fig = plt.figure()
 ax = fig.add_subplot()
 plt.plot("Year", "Worldmineproduction", data=fe, color="b", label="Iron")
-plt.plot("Year", "Worldmineproduction", data=cu, color="y", label="Mined Copper")
-plt.plot("Year", "Worldmineproduction", data=mo, color="g", label="Molybdenum")
-plt.plot("Year", "Worldmineproduction", data=mo, color="r", label="Tantalum")
+plt.plot("Year", "Worldrefinedproduction", data=au, color="y", label="Gold")
+plt.plot("Year", "Worldmineproduction", data=ta, color="r", label="Tantalum")
+plt.title("World Production of Select Minerals")
+plt.legend(loc=0)
+plt.xlabel("Year")
+plt.ylabel("Thousand metric tons")
+plt.yscale("log")
+# plt.xticks(range(1990, 2011, 4))
+# plt.yticks(range(1000, 18000, 1000))
 plt.savefig("output/mineral/specificprod.png")
 plt.close()
