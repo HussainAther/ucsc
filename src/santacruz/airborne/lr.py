@@ -88,8 +88,3 @@ plt.close()
 # Predict results from the test data.
 predicted = clf.predict(X)
 
-# Plot the confusion matrix.
-cm = confusion_matrix(y,predicted)
-plot_confusion_matrix(cm, classes=y,
-                      title="Confusion matrix, without normalization")
-
