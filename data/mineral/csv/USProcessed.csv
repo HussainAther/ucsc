@@ -189,7 +189,7 @@ PlatinumGroupMetals(kg)ImportsIridium,3010,2800,3410,2550,1520
 PlatinumGroupMetals(kg)1st,UnitedKingdom,UnitedKingdom,UnitedKingdom,SouthAfrica,SouthAfrica
 PlatinumGroupMetals(kg)2nd,SouthAfrica,SouthAfrica,SouthAfrica,UnitedKingdom,UnitedKingdom
 PlatinumGroupMetals(kg)3rd,Germany,Germany,Germany,Germany,Germany
-OsmiuImports,39,56,23,11,68
+OsmiumImports,39,56,23,11,68
 Osmium1st,Russia,SouthAfrica,Germany,China,SouthAfrica
 Osmium2nd,SouthAfrica,China,China,Germany,China
 Osmium3rd,Germany/China,Germany,SouthAfrica,NA,NA
