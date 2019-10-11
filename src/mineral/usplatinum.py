@@ -21,7 +21,7 @@ plt.plot("Year", "Worldmineproduction", data=pt)
 plt.title("World Platinum Production")
 plt.ylabel("Thousand Metric Tons")
 plt.xlabel("Year")
-plt.xticks(range(1990, 2010)) 
+plt.xticks(range(1990, 2011, 5)) 
 plt.savefig("output/mineral/ptworldprod.png")
 
 fig = plt.figure()
