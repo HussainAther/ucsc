@@ -44,3 +44,16 @@ plt.ylabel("Thousand Metric Tons")
 plt.xlabel("Year")
 plt.xticks(range(2005, 2010)) 
 plt.savefig("output/mineral/pgeusprocon.png")
+
+fig = plt.figure()
+ax = fig.add_subplot()
+# Iridium, Osmium and Ruthenium Exports 
+usproc["irosruexp"] = [float(i)*.000001 for i in usproc["PlatinumGroupMetals(kg)ExportsIridiumosmiumandruthenium"]]
+# Palladdium Exports
+usproc["pdexp"] = [float(i)*.000001 for i in usproc["PlatinumGroupMetals(kg)ExportsPalladium"]]
+# Platinum Exports
+usproc["ptexp"] = [float(i)*.000001 for i in usproc["PlatinumGroupMetals(kg)ExportsPlatinum"]]
+# Rhodium Exports
+usproc["rhexp"] = [float(i)*.00001 for i in usproc["PlatinumGroupMetals(kg)ExportsRhodium"]]
+# Iridium Imports
+usproc["irimp"] = [float(i)*.00001 for i in usproc["PlatinumGroupMetals(kg)ImportsIridium"]]
