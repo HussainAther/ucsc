@@ -21,3 +21,16 @@ fmn["Year"] = [int(i) for i in fmn["Year"]]
 smn["Year"] = [int(i) for i in smn["Year"]]
 usmine["Year"] = [int(i) for i in usmine.index]
 usproc["Year"] = [int(i) for i in usproc.index]
+
+fig = plt.figure()
+ax = fig.add_subplot()
+plt.plot("Year", "Worldmineproduction", data=mn, color="#8A2BE2", label="Manganese")
+plt.plot("Year", "Worldmineproduction", data=fmn, color="#FF00FF", label="Ferromanganese")
+plt.plot("Year", "Worldmineproduction", data=smn, color="#4B0082", label="Silicomanganese")
+plt.title("World Production of Types of Manganese")
+plt.legend(loc=0)
+plt.xlabel("Year")
+plt.ylabel("Thousand metric tons")
+plt.yscale("log")
+plt.xticks(range(1990, 2011, 4))
+plt.savefig("output/mineral/mnworldprod.png")
