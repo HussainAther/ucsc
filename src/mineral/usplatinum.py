@@ -57,3 +57,14 @@ usproc["ptexp"] = [float(i)*.000001 for i in usproc["PlatinumGroupMetals(kg)Expo
 usproc["rhexp"] = [float(i)*.00001 for i in usproc["PlatinumGroupMetals(kg)ExportsRhodium"]]
 # Iridium Imports
 usproc["irimp"] = [float(i)*.00001 for i in usproc["PlatinumGroupMetals(kg)ImportsIridium"]]
+plt.plot("Year", "irosruexp", data=usproc, label="Iridium, Osmium and Ruthenium Exports")
+plt.plot("Year", "pdexp", data=usproc, label="Palladium Exports")
+plt.plot("Year", "ptexp", data=usproc, label="Platinum Exports")
+plt.plot("Year", "rhexp", data=usproc, label="Rhodium Exports")
+plt.plot("Year", "irimp", data=usproc, label="Iridium Imports")
+plt.title("U.S. PGE Exports and Imports")
+plt.legend(loc=0)
+plt.ylabel("Thousand Metric Tons")
+plt.xlabel("Year")
+plt.xticks(range(2005, 2010)) 
+plt.savefig("output/mineral/pgeexpimp.png")
