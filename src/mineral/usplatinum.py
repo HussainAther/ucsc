@@ -55,16 +55,35 @@ usproc["pdexp"] = [float(i)*.000001 for i in usproc["PlatinumGroupMetals(kg)Expo
 usproc["ptexp"] = [float(i)*.000001 for i in usproc["PlatinumGroupMetals(kg)ExportsPlatinum"]]
 # Rhodium Exports
 usproc["rhexp"] = [float(i)*.00001 for i in usproc["PlatinumGroupMetals(kg)ExportsRhodium"]]
-# Iridium Imports
-usproc["irimp"] = [float(i)*.00001 for i in usproc["PlatinumGroupMetals(kg)ImportsIridium"]]
 plt.plot("Year", "irosruexp", data=usproc, label="Iridium, Osmium and Ruthenium Exports")
 plt.plot("Year", "pdexp", data=usproc, label="Palladium Exports")
 plt.plot("Year", "ptexp", data=usproc, label="Platinum Exports")
 plt.plot("Year", "rhexp", data=usproc, label="Rhodium Exports")
-plt.plot("Year", "irimp", data=usproc, label="Iridium Imports")
-plt.title("U.S. PGE Exports and Imports")
+plt.title("U.S. PGE Exports")
 plt.legend(loc=0)
 plt.ylabel("Thousand Metric Tons")
 plt.xlabel("Year")
 plt.xticks(range(2005, 2010)) 
-plt.savefig("output/mineral/pgeexpimp.png")
+plt.savefig("output/mineral/pgeexp.png")
+
+fig = plt.figure()
+ax = fig.add_subplot()
+# Iridium Imports
+usproc["irimp"] = [float(i)*.00001 for i in usproc["PlatinumGroupMetals(kg)ImportsIridium"]]
+usproc["OsmiumImports"] = [float(i) for i in usproc["OsmiumImports"]]
+usproc["PalladiumImports"] = [float(i) for i in usproc["PalladiumImports"]]
+usproc["PlatinumImports"] = [float(i) for i in usproc["PlatinumImports"]]
+usproc["RhodiumImports"] = [float(i) for i in usproc["RhodiumImports"]]
+usproc["RutheniumImports"] = [float(i) for i in usproc["RutheniumImports"]]
+plt.plot("Year", "irimp", data=usproc, label="Iridium Imports")
+plt.plot("Year", "OsmiumImports", data=usproc, label="Osmium Imports")
+plt.plot("Year", "PalladiumImports", data=usproc, label="Palladium Imports")
+plt.plot("Year", "PlatinumImports", data=usproc, label="Platinum Imports")
+plt.plot("Year", "RhodiumImports", data=usproc, label="Rhodium Imports")
+plt.plot("Year", "RutheniumImports", data=usproc, color="#000000", label="Ruthenium Imports")
+plt.title("U.S. PGE Imports")
+plt.legend(loc=0)
+plt.ylabel("Thousand Metric Tons")
+plt.xlabel("Year")
+plt.xticks(range(2005, 2010)) 
+plt.savefig("output/mineral/pgeimp.png")
