@@ -19,6 +19,10 @@ alldf = [cu, cu2, cu3, cu4]
 usmine = usmine.transpose()
 usproc = usproc.transpose()
 
+cu["Year"] = [int(i) for i in cu["Year"]]
+cu2["Year"] = [int(i) for i in cu2["Year"]]
+cu3["Year"] = [int(i) for i in cu3["Year"]]
+cu4["Year"] = [int(i) for i in cu4["Year"]]
 usmine["Year"] = [int(i) for i in usmine.index]
 usproc["Year"] = [int(i) for i in usproc.index]
 
@@ -41,19 +45,9 @@ plt.title("U.S. Production of Types of Copper")
 plt.legend(loc=0)
 plt.xlabel("Year")
 plt.ylabel("Thousand metric tons")
+plt.yscale("log")
 plt.xticks(range(1990, 2011, 4))
 plt.savefig("output/mineral/uscopperprod.png")
-
-fig = plt.figure()
-ax = fig.add_subplot()
-plt.plot("Year", "CopperConsumption", data=usmine, color="r", label="U.S. Copper Consumption")
-plt.plot("Year", "CopperProduction", data=usmine, color="g", label="U.S. Copper Production")
-plt.title("U.S. Consumption of Mined Copper")
-plt.ylabel("Thousand metric tons")
-plt.xlabel("Year")
-plt.xticks(range(2005, 2010))
-plt.legend(loc=0)
-plt.savefig("output/mineral/uscoppercon.png")
 
 fig = plt.figure()
 ax = fig.add_subplot()
@@ -86,7 +80,7 @@ plt.plot("Year", "totcuprodtmt", data=usproc, color="#000000", label="U.S. Total
 plt.plot("Year", "smecuprodtmt", data=usproc, color="r", label="U.S. Smelted Copper Production")
 plt.plot("Year", "refcuprodtmt", data=usproc, color="g", label="U.S. Refined Copper Production")
 plt.plot("Year", "seccuprodtmt", data=usproc, color="y", label="U.S. Secondary Copper Production")
-plt.plot("csprodtmt", data=usproc, color="b", label="U.S. Copper-Sulfate Production")
+plt.plot("Year", "csprodtmt", data=usproc, color="b", label="U.S. Copper-Sulfate Production")
 plt.title("U.S. Copper Production")
 plt.ylabel("Thousand metric tons")
 plt.xlabel("Year")
