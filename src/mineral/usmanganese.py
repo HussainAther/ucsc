@@ -52,6 +52,15 @@ usproc["mnccprod"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)Pr
 usproc["mnccexp"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)ExportsCaustic-calcinedandspecifiedmagnesias"]]
 # U.S. Refractory Magnesia Exports in thousand metric tons 
 usproc["mnrefexp"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)ExportsRefractorymagnesia"]]
-plt.plot("Year", "mnccprod", data=usproc, color="b", label="Caustic-calcined and specified Magnesias Production")
-plt.plot("Year", "mnccexp", data=usproc, color="r", label="Caustic-calcined and specified Magnesias Exports")
-plt.plot("Year", "mnrefexp", data=usproc, color="g", label="Refractory Magnesias Exports")
+# U.S. Caustic-calcined and specified Magnesia Ixports in thousand metric tons 
+usproc["mnccimp"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)ImportsCaustic-calcinedandspecifiedmagnesias"]]
+plt.plot("Year", "mnccprod", data=usproc, color="b", label="Caustic-calcined and specified Magnesia Production")
+plt.plot("Year", "mnccexp", data=usproc, color="r", label="Caustic-calcined and specified Magnesia Exports")
+plt.plot("Year", "mnrefexp", data=usproc, color="g", label="Refractory Magnesia Exports")
+plt.plot("Year", "mnccimp", data=usproc, color="y", label="Caustic-calcined and specific Magnesia Imports")
+plt.title("U.S. Processed Manganese Trends")
+plt.legend(loc=0)
+plt.xlabel("Year")
+plt.ylabel("Thousand metric tons")
+plt.xticks(range(2005, 2010))
+plt.savefig("output/mineral/mnusproc.png")
