@@ -34,3 +34,13 @@ usproc["pgeptcon"] = [float(i)*0.000001 for i in usproc["PlatinumGroupMetals(kg)
 usproc["pgeptpro"] = [float(i)*0.000001 for i in usproc["PlatinumGroupMetals(kg)ProductionPalladium"]]
 # Platinum Production in thousand metric ton
 usproc["pgepdpro"] = [float(i)*0.000001 for i in usproc["PlatinumGroupMetals(kg)ProductionPlatinum"]]
+plt.plot("Year", "pgepdcon", data=usproc, label="Palladium Consumption")
+plt.plot("Year", "pgeptcon", data=usproc, label="Platinum Consumption")
+plt.plot("Year", "pgeptpro", data=usproc, label="Platinum Production")
+plt.plot("Year", "pgepdpro", data=usproc, label="Palladium Production")
+plt.title("U.S. PGE Production and Consumption")
+plt.legend(loc=0)
+plt.ylabel("Thousand Metric Tons")
+plt.xlabel("Year")
+plt.xticks(range(2005, 2010)) 
+plt.savefig("output/mineral/pgeusprocon.png")
