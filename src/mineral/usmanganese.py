@@ -46,3 +46,9 @@ plt.savefig("output/mineral/mnuscon.png")
 
 fig = plt.figure()
 ax = fig.add_subplot()
+# U.S. Manganese Compound Consumption in thousand metric tons
+usproc["mncompcon"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)Consumption"]]
+# U.S. Caustic-calcined and specified Magnesias Production in thousand metric tons
+usproc["mnccprod"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)ProductionCaustic-calcinedandspecifiedmagnesias"]]
+# U.S Refractory Magnesia Production in thousand metric tons
+usproc["mnccprod"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)ProductionRefractorymagnesia"]]
