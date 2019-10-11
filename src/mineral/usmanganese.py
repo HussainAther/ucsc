@@ -46,9 +46,12 @@ plt.savefig("output/mineral/mnuscon.png")
 
 fig = plt.figure()
 ax = fig.add_subplot()
-# U.S. Manganese Compound Consumption in thousand metric tons
-usproc["mncompcon"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)Consumption"]]
 # U.S. Caustic-calcined and specified Magnesias Production in thousand metric tons
 usproc["mnccprod"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)ProductionCaustic-calcinedandspecifiedmagnesias"]]
-# U.S Refractory Magnesia Production in thousand metric tons
-usproc["mnccprod"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)ProductionRefractorymagnesia"]]
+# U.S. Caustic-calcined and specified Magnesias Exports in thousand metric tons 
+usproc["mnccexp"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)ExportsCaustic-calcinedandspecifiedmagnesias"]]
+# U.S. Refractory Magnesia Exports in thousand metric tons 
+usproc["mnrefexp"] = [float(i)/1000 for i in usproc["MagnesiumCompounds(000mt)ExportsRefractorymagnesia"]]
+plt.plot("Year", "mnccprod", data=usproc, color="b", label="Caustic-calcined and specified Magnesias Production")
+plt.plot("Year", "mnccexp", data=usproc, color="r", label="Caustic-calcined and specified Magnesias Exports")
+plt.plot("Year", "mnrefexp", data=usproc, color="g", label="Refractory Magnesias Exports")
