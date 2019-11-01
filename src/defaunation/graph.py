@@ -24,4 +24,6 @@ df["Study design"].value_counts().plot.barh(stacked=True)
 plt.ylabel("Study design")
 plt.xlabel("Count")
 plt.tight_layout()
-plt.savefig("output/defaunation/studydesign.png") 
+plt.savefig("output/defaunation/studydesign.png")
+
+ 
