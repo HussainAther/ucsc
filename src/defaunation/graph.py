@@ -8,4 +8,4 @@ Defaunation statistics.
 
 df = pd.DataFrame.from_csv("data/defaunation/gardneretal.csv", encoding="windows-1252")
 
-print(df.columns)
+print(df["Region"].value_counts())
