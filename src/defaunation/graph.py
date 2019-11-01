@@ -25,3 +25,5 @@ plt.ylabel("Study design")
 plt.xlabel("Count")
 plt.tight_layout()
 plt.savefig("output/defaunation/studydesign.png")
+
+
