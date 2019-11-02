@@ -28,5 +28,15 @@ world = gpd.read_file(gpd.datasets.get_path("naturalearth_lowres"))
 ax = world.plot(color="white", edgecolor="black")
 gdf.plot(ax=ax, color="red", markersize=3)
 plt.savefig("output/criticalminerals/worldmap.png")
+plt.close()
 
-print(gdf.columns)
+# Restrict to North America.
+ax = world[world.continent == "North America"].plot(
+    color="white", edgecolor="black")
+nagdf = pd.concat([gdf.loc[gdf["LOCATION"] == "United States of America"], 
+                  gdf.loc[gdf["LOCATION"] == "Canada"],
+                  gdf.loc[gdf["LOCATION"] == "Mexico"]])
+nagdf.plot(ax=ax, color="red", markersize=2)
+
+# Plot.
+plt.savefig("output/criticalminerals/namap.png")
