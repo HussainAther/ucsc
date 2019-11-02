@@ -4,7 +4,7 @@ import pandas as pd
 import researchpy
 
 """
-Defaunation statistics.
+Defaunation statistics
 """
 
 # Tranpose the input DataFrame.

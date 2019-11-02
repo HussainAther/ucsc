@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 """
-Defaunation graphs.
+Defaunation graphs
 """
 
 df = pd.DataFrame.from_csv("data/defaunation/gardneretal.csv", encoding="windows-1252")
