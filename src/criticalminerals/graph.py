@@ -26,5 +26,5 @@ world = gpd.read_file(gpd.datasets.get_path("naturalearth_lowres"))
 
 # Plot.
 ax = world.plot(color="white", edgecolor="black")
-gdf.plot(ax=ax, color="red", markersize=5)
+gdf.plot(ax=ax, color="red", markersize=3)
 plt.savefig("output/criticalminerals/worldmap.png")
