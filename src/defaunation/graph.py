@@ -8,8 +8,6 @@ Defaunation statistics.
 
 df = pd.DataFrame.from_csv("data/defaunation/gardneretal.csv", encoding="windows-1252")
 
-colors = ["b", "g", "r", "c", "m", "y", "k"]
-
 # plt.figure(figsize=(4,23))
 plt.figure()
 df["Region"].value_counts().plot.bar(stacked=True)
