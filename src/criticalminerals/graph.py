@@ -40,3 +40,5 @@ nagdf.plot(ax=ax, color="red", markersize=2)
 
 # Plot.
 plt.savefig("output/criticalminerals/namap.png")
+
+print(gdf["CRITICAL_M"])
