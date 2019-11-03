@@ -1,4 +1,4 @@
-# University of California, Santa Cruz Journalism
+# University of California, Santa Cruz Data Journalism
 
 These are my progamming and data science projects during my year at the University of California, Santa Cruz. In my Master's of Science Communication program, I want to use my abilities as a writer and data scientist in crafting stories.
 
